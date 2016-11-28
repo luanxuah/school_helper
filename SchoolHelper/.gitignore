@@ -1,8 +1,10 @@
+bin/
+build/
+.idea/
 *.iml
+social_sdk_library_project/build/
+yxckDoctor/build/
+social_sdk_library_project/bin/
+yxckDoctor/bin/
 .gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
-.DS_Store
-/build
-/captures
+
