@@ -1,0 +1,222 @@
+<com.luanxu.custom.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_cancle"
+        android:textColor="@color/main_blue"
+        android:textSize="@dimen/yms_dimens_28.0_px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="11%w"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/distance_10"
+        android:paddingRight="@dimen/distance_10"
+        android:text="@string/cancle" />
+
+    <TextView
+        android:id="@+id/tv_text_login"
+        android:textColor="@color/black"
+        android:textSize="@dimen/yms_dimens_36.0_px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="22%w"
+        android:gravity="center"
+        android:text="@string/login" />
+
+    <com.luanxu.custom.RoundCornerImageView
+        android:id="@+id/iv_head"
+        android:textColor="@color/black"
+        android:textSize="@dimen/yms_dimens_36.0_px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_heightPercent="20%w"
+        app:layout_marginTopPercent="10%w"
+        app:layout_widthPercent="20%w"
+        android:src="@mipmap/ic_heads_doc"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/yms_dimens_28.0_px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_marginBottomPercent="8%w"
+        app:layout_marginTopPercent="3%w"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13%w"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/distance_10"
+        android:paddingRight="@dimen/distance_10" >
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_heightPercent="11%w"
+            android:gravity="center_vertical"
+            android:text="@string/account" />
+
+        <EditText
+            android:id="@+id/et_username"
+            android:textColor="@color/black"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:paddingLeft="@dimen/distance_20"
+            android:paddingRight="@dimen/distance_20"
+            android:singleLine="true"
+            android:textColorHint="@color/main_hint"
+            android:textCursorDrawable="@null" />
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:id="@+id/pll_phone_close"
+            android:layout_width="wrap_content"
+            app:layout_marginRightPercent="4%w"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingRight="@dimen/distance_10"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/btn_dele"/>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/distance_10"
+        android:background="@color/main_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13%w"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/distance_10"
+        android:paddingRight="@dimen/distance_10" >
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:layout_heightPercent="11%w"
+            android:gravity="center_vertical"
+            android:text="@string/password" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/password_hint"
+            android:inputType="textWebPassword"
+            android:paddingLeft="@dimen/distance_20"
+            android:paddingRight="@dimen/distance_20"
+            android:singleLine="true"
+            android:textColorHint="@color/main_hint"
+            android:textCursorDrawable="@null" />
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:id="@+id/pll_psd_close"
+            android:layout_width="wrap_content"
+            app:layout_marginRightPercent="4%w"
+            android:paddingLeft="@dimen/distance_10"
+            android:paddingRight="@dimen/distance_10"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/btn_dele"/>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/distance_10"
+        android:background="@color/main_divider" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/yms_dimens_32.0_px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/distance_10"
+        android:layout_marginRight="@dimen/distance_10"
+        app:layout_heightPercent="13%w"
+        app:layout_marginTopPercent="5%w"
+        android:background="@drawable/bg_shape_blue_8px"
+        android:clickable="true"
+        android:onClick="login"
+        android:text="@string/login" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="11%w"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/distance_10"
+        android:paddingRight="@dimen/distance_10" >
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_heightPercent="11%w"
+            android:clickable="true"
+            android:gravity="center_vertical|start"
+            android:text="@string/forget_password" />
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/tv_register"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/yms_dimens_28.0_px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center_vertical|end"
+            android:text="@string/register" />
+    </LinearLayout>
+</com.luanxu.custom.percent.PercentLinearLayout>

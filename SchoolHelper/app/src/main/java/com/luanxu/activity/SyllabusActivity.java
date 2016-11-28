@@ -4,10 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.luanxu.base.BaseActivity;
 import com.luanxu.bean.CourseBean;
+import com.luanxu.custom.TitleBar;
 import com.luanxu.schoolhelper.R;
 
 import java.util.ArrayList;
@@ -16,7 +20,7 @@ import java.util.List;
 /**
  * Created by luanxu on 2016/11/27.
  */
-public class SyllabusActivity extends Activity{
+public class SyllabusActivity extends BaseActivity{
     LinearLayout weekPanels[]=new LinearLayout[7];
     List courseData[]=new ArrayList[7];
     int itemHeight;
@@ -26,7 +30,6 @@ public class SyllabusActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_syllabus);
-        //
         itemHeight=getResources().getDimensionPixelSize(R.dimen.yms_dimens_80_0_px);
         marTop=getResources().getDimensionPixelSize(R.dimen.yms_dimens_4_0_px);
         marLeft=getResources().getDimensionPixelSize(R.dimen.yms_dimens_4_0_px);

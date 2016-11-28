@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/yms_dimens_6.0_px"
     >
 
-    <RelativeLayout
+    <com.luanxu.custom.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -15,6 +16,7 @@
             android:id="@+id/bt_get"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:layout_widthPercent="50%w"
             android:text="GET请求"
             android:textSize="@dimen/yms_font_30_px"
             android:onClick="onGet"
@@ -78,7 +80,7 @@
             android:textSize="@dimen/yms_font_30_px"
             android:onClick="onOther"
             />
-    </RelativeLayout>
+    </com.luanxu.custom.percent.PercentRelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"

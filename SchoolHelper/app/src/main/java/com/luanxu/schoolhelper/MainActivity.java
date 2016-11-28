@@ -1,12 +1,14 @@
 package com.luanxu.schoolhelper;
 
-import android.app.Activity;
-import android.os.Bundle;
+import com.luanxu.base.BaseActivity;
 
-public class MainActivity extends Activity {
+/**
+ * Created by 栾煦 on 2016/11/28.
+ */
+public class MainActivity extends BaseActivity{
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+        setContentView(R.layout.act_main);
     }
 }
