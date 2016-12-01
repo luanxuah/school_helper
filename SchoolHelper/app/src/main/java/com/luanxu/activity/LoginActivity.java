@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
 import com.luanxu.custom.RoundCornerImageView;
 import com.luanxu.custom.percent.PercentLinearLayout;
@@ -52,7 +53,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_login);
+        SchoolHelperApplication.getInstance().addActivity(this);
         context = this;
+
         init();
     }
 

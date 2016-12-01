@@ -9,4 +9,13 @@
     <string name="password_hint">请填写密码</string>
     <string name="forget_password">忘记密码？</string>
     <string name="register">注册</string>
+    <string name="reference">参考</string>
+    <string name="continue_edu">继教</string>
+    <string name="patient_edu">患教</string>
+    <string name="patient_edu_detail">患教详情</string>
+    <string name="me">我</string>
+    <string name="current_tag">CURRENTTAG</string>
+    <string name="credit">学分</string>
+    <string name="credit_satisfy">恭喜您，您的学分已满足毕业资格！</string>
+    <string name="credit_dissatisfy">对不起，您的学分暂时不满足毕业资格，加油哟！</string>
 </resources>

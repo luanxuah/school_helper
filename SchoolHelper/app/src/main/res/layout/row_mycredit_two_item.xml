@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="3%w"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%w"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="高等数学"/>
+
+                <TextView
+                    android:id="@+id/tv_credit"
+                    android:textColor="@color/main_gray"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    app:layout_marginRightPercent="3%w"
+                    android:text="1.5学分"/>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:textColor="@color/main_gray"
+                android:textSize="@dimen/yms_font_28_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginBottomPercent="3%w"
+                app:layout_marginLeftPercent="3%w"
+                app:layout_marginTopPercent="1%w"
+                android:text="大一上学期"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/main_divider" />
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+</com.luanxu.custom.percent.PercentLinearLayout>

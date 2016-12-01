@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
 import com.luanxu.schoolhelper.R;
 
@@ -31,6 +32,7 @@ public class StartActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_start);
+        SchoolHelperApplication.getInstance().addActivity(this);
         context = this;
         handler.sendEmptyMessageDelayed(LOGIN, 2000);
     }

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headview_acc"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginBottom="-100dp"
+        android:layout_marginTop="-100dp"
+        android:background="@color/main_blue" >
+        >
+        <LinearLayout
+            android:id="@+id/ll_changeInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" >
+
+            <com.luanxu.custom.CircleImageView
+                android:id="@+id/user_img"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/ic_heads_doc"
+                app:border_color="@color/white"
+                app:border_width="2dp" />
+
+            <TextView
+                android:id="@+id/frag_acc_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="栾煦"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+            <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="数学计算机科学学院"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView 
+                    android:id="@+id/acc_gold_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="软件工程"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/frag_acc_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="110dp"
+            >
+        </ImageView>
+    </RelativeLayout>
+
+    <com.luanxu.custom.PullScrollView
+        android:id="@+id/scroll_view_acc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:headerHeight="300dp"
+        app:headerVisibleHeight="100dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_background"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/acc_ll_mycourse"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_setting_item"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="学分查询" />
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/c"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_ll_offline"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_setting_item"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="成绩查询" />
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/c"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_ll_myorders"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_setting_item"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="空教室" />
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/c"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_setting_item"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="收藏" />
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/c"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_setting_item"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:textSize="16dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="设置" />
+
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/c"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_exit_account"
+                android:text="安全退出"
+                android:textColor="@android:color/white"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:visibility="visible" />
+        </LinearLayout>
+    </com.luanxu.custom.PullScrollView>
+
+</LinearLayout>

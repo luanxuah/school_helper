@@ -1281,7 +1281,7 @@
 <dimen name="yms_dimens_1278.0_px">639.0dp</dimen>
 <dimen name="yms_dimens_1279.0_px">639.5dp</dimen>
 <dimen name="yms_dimens_1280.0_px">640.0dp</dimen>
-
+    <dimen name="bottom_margin">55dp</dimen>
 <!-- 以 1280 x 720 为基准 -->
 <!-- 在xml文件中直接使用，在Java代码中使用setTextSize()方法时需要把单位指定为 TypedValue.COMPLEX_UNIT_PX -->
 <dimen name="yms_font_20_px">10sp</dimen>

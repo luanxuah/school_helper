@@ -19,4 +19,11 @@
     <color name="color_358FD3">#358FD3</color>
     <color name="color_7E58AEEF">#7E58AEEF</color>
     <color name="color_58aeef">#58aeef</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_e0e3ff">#E0E3FF</color>
+    <color name="color_4889c7">#4889C7</color>
+    <color name="color_80ffff">#80FFFF</color>
+    <color name="main_bg2">#f6f6f6</color>
+    <color name="light">#FFEEEEEE</color>
+    <color name="main_background">#efeff4</color>
 </resources>

@@ -1,34 +1,58 @@
-package com.luanxu.activity;
+package com.luanxu.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.luanxu.application.SchoolHelperApplication;
-import com.luanxu.base.BaseActivity;
+import com.luanxu.base.BaseFragment;
 import com.luanxu.bean.CourseBean;
 import com.luanxu.schoolhelper.R;
+import com.luanxu.utils.DateUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
- * Created by luanxu on 2016/11/27.
+ * Created by 栾煦 on 2016/11/29.
  */
-public class SyllabusActivity extends BaseActivity{
+public class SyllabusFragment extends BaseFragment{
+    private Activity context;
+
+    //课程的集合
+    private List courseData[]=new ArrayList[7];
+    private int itemHeight;
+    private int marTop;
+    private int marLeft;
+
+    private View view;
+    //星期控件的数组
     LinearLayout weekPanels[]=new LinearLayout[7];
+    //日期控件的数组
     TextView dayPanels[] = new TextView[7];
-    List courseData[]=new ArrayList[7];
-    int itemHeight;
-    int marTop,marLeft;
+    //当前月份
+    private TextView tv_month;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.frag_syllabus);
-        SchoolHelperApplication.getInstance().addActivity(this);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (view == null) {
+            view = LayoutInflater.from(getActivity()).inflate(R.layout.frag_syllabus, null);
+        } else {
+            ((ViewGroup) view.getParent()).removeView(view);
+        }
+        return view;
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        context = getActivity();
         itemHeight=getResources().getDimensionPixelSize(R.dimen.yms_dimens_80_0_px);
         marTop=getResources().getDimensionPixelSize(R.dimen.yms_dimens_4_0_px);
         marLeft=getResources().getDimensionPixelSize(R.dimen.yms_dimens_4_0_px);
@@ -36,12 +60,26 @@ public class SyllabusActivity extends BaseActivity{
         //数据
         getData();
 
+        init();
+    }
+
+    /**
+     * 初始化数据和控件
+     */
+    private void init(){
+        String[] days = DateUtils.getNowWeekDays();
+        for (int i=0; i<dayPanels.length; i++){
+            dayPanels[i] = (TextView) view.findViewById(R.id.day_1+2*i);
+            dayPanels[i].setText(days[i]);
+        }
         for (int i = 0; i < weekPanels.length; i++) {
-            weekPanels[i]=(LinearLayout) findViewById(R.id.weekPanel_1+i);
+            weekPanels[i]=(LinearLayout) view.findViewById(R.id.weekPanel_1+i);
             initWeekPanel(weekPanels[i], courseData[i]);
         }
-
+        tv_month = (TextView) view.findViewById(R.id.tv_month);
+        tv_month.setText(DateUtils.getNowMonth());
     }
+
     public void getData(){
         List<CourseBean>list1=new ArrayList<CourseBean>();
         CourseBean c1 =new CourseBean("软件工程","A402", 1, 4, "典韦", "1002");
@@ -76,7 +114,7 @@ public class SyllabusActivity extends BaseActivity{
         CourseBean pre=data.get(0);
         for (int i = 0; i < data.size(); i++) {
             CourseBean c =data.get(i);
-            TextView tv =new TextView(this);
+            TextView tv =new TextView(context);
             LinearLayout.LayoutParams lp =new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.FILL_PARENT ,
                     itemHeight*c.getStep()+marTop*(c.getStep()-1));
