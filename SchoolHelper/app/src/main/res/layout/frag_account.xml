@@ -22,7 +22,7 @@
             android:orientation="vertical" >
 
             <com.luanxu.custom.CircleImageView
-                android:id="@+id/user_img"
+                android:id="@+id/civ_head"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
@@ -31,7 +31,7 @@
                 app:border_width="2dp" />
 
             <TextView
-                android:id="@+id/frag_acc_username"
+                android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -46,6 +46,7 @@
                 android:paddingBottom="5dp"
                 >
                 <TextView
+                    android:id="@+id/tv_academy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="数学计算机科学学院"
@@ -53,7 +54,7 @@
                     />
 
                 <TextView 
-                    android:id="@+id/acc_gold_recharge"
+                    android:id="@+id/tv_class"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="软件工程"
@@ -98,7 +99,7 @@
             android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/acc_ll_mycourse"
+                android:id="@+id/ll_circle"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
@@ -130,7 +131,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/acc_ll_offline"
+                android:id="@+id/ll_score"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
@@ -162,7 +163,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/acc_ll_myorders"
+                android:id="@+id/ll_empty_classroom"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
@@ -195,6 +196,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_collect"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
@@ -226,6 +228,7 @@
                     android:src="@mipmap/c"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ll_set"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"

@@ -146,6 +146,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             case R.id.tv_forget_password:
 
                 break;
+            //注册
             case R.id.tv_register:
 
                 break;

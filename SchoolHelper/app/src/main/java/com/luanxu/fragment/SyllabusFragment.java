@@ -20,8 +20,12 @@ import java.util.List;
 
 
 /**
- * Created by 栾煦 on 2016/11/29.
+ * @author: LuanXu
+ * @createTime:2016/12/1 20:43
+ * @className:  SyllabusFragment
+ * @Description: 课表
  */
+
 public class SyllabusFragment extends BaseFragment{
     private Activity context;
 
