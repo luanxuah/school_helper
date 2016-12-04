@@ -24,7 +24,7 @@
             <TextView
                 android:id="@+id/tv_title"
                 android:textSize="@dimen/yms_dimens_32.0_px"
-                android:textColor="@color/black"
+                android:textColor="@color/color_black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/word_size_15sp"
@@ -54,7 +54,7 @@
                 <TextView
                     android:id="@+id/tv_message"
                     android:textSize="@dimen/yms_dimens_28.0_px"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_black"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_marginLeftPercent="5%w"
@@ -67,7 +67,7 @@
             android:id="@+id/line2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/line_width1"
-            android:background="@color/main_divider" />
+            android:background="@color/color_divider" />
 
         <com.luanxu.custom.percent.PercentLinearLayout
             android:id="@+id/operation_layout"
@@ -79,7 +79,7 @@
 
             <Button
                 android:id="@+id/cancel_btn"
-                android:textColor="@color/main_blue"
+                android:textColor="@color/color_blue"
                 android:textSize="@dimen/yms_dimens_32.0_px"
                 android:layout_width="0dip"
                 android:layout_height="0dp"
@@ -94,12 +94,12 @@
                 android:id="@+id/line_middle"
                 android:layout_width="0.5dp"
                 android:layout_height="match_parent"
-                android:background="@color/main_divider"
+                android:background="@color/color_divider"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/middle_btn"
-                android:textColor="@color/main_blue"
+                android:textColor="@color/color_blue"
                 android:textSize="@dimen/yms_dimens_32.0_px"
                 android:layout_width="0dip"
                 android:layout_height="0dp"
@@ -115,11 +115,11 @@
                 android:layout_width="0.5dp"
                 android:layout_height="0dp"
                 app:layout_heightPercent="15%w"
-                android:background="@color/main_divider" />
+                android:background="@color/color_divider" />
 
             <Button
                 android:id="@+id/confirm_btn"
-                android:textColor="@color/main_blue"
+                android:textColor="@color/color_blue"
                 android:textSize="@dimen/yms_dimens_32.0_px"
                 android:layout_width="0dip"
                 android:layout_height="0dp"

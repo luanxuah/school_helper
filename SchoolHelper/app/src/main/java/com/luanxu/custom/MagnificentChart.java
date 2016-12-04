@@ -337,7 +337,7 @@ public class MagnificentChart extends View {
         Paint currentPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         
         if(maxValue==0){
-        	 int color = getResources().getColor(R.color.main_bg2);
+        	 int color = getResources().getColor(R.color.color_f6f6f6);
         	 currentPaint.setColor(color);
              canvas.drawArc(mainRectangle, startAngle, 360, true, currentPaint);
         }

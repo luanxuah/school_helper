@@ -3,19 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_background"
+    android:background="@color/color_background"
     android:orientation="vertical" >
 
     <RelativeLayout
-        android:id="@+id/headview_acc"
+        android:id="@+id/rl_head"
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:layout_marginBottom="-100dp"
         android:layout_marginTop="-100dp"
-        android:background="@color/main_blue" >
+        android:background="@color/color_blue" >
         >
         <LinearLayout
-            android:id="@+id/ll_changeInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -27,17 +26,17 @@
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
                 android:src="@mipmap/ic_heads_doc"
-                app:border_color="@color/white"
+                app:border_color="@color/color_white"
                 app:border_width="2dp" />
 
             <TextView
-                android:id="@+id/tv_username"
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
                 android:text="栾煦"
-                android:textColor="@android:color/white"
+                android:textColor="@color/color_white"
                 android:textSize="14dp" />
             <LinearLayout 
                 android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="数学计算机科学学院"
-                    android:textColor="@color/white"
+                    android:textColor="@color/color_white"
                     />
 
                 <TextView 
@@ -66,20 +65,10 @@
                     />
             </LinearLayout>
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/frag_acc_setting"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="110dp"
-            >
-        </ImageView>
     </RelativeLayout>
 
     <com.luanxu.custom.PullScrollView
-        android:id="@+id/scroll_view_acc"
+        android:id="@+id/psv"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -95,15 +84,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/main_background"
+            android:background="@color/color_background"
             android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/ll_circle"
+                android:id="@+id/ll_credit"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
-                android:background="@drawable/bg_setting_item"
+                android:background="@drawable/selector_pressed_background"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:layout_marginTop="10dp"
@@ -121,13 +110,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="学分查询" />
+                    android:text="@string/str_credit_query" />
 
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/c"/>
+                    android:src="@mipmap/ic_work_right"/>
             </LinearLayout>
 
             <LinearLayout
@@ -136,7 +125,7 @@
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_setting_item"
+                android:background="@drawable/selector_pressed_background"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:orientation="horizontal">
@@ -153,13 +142,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="成绩查询" />
+                    android:text="@string/str_score_query" />
 
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/c"/>
+                    android:src="@mipmap/ic_work_right"/>
             </LinearLayout>
 
             <LinearLayout
@@ -168,7 +157,7 @@
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_setting_item"
+                android:background="@drawable/selector_pressed_background"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
 
@@ -186,13 +175,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="空教室" />
+                    android:text="@string/str_empty_classroom" />
 
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/c"/>
+                    android:src="@mipmap/ic_work_right"/>
             </LinearLayout>
 
             <LinearLayout
@@ -201,7 +190,7 @@
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_setting_item"
+                android:background="@drawable/selector_pressed_background"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
 
@@ -219,13 +208,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="收藏" />
+                    android:text="@string/str_collect" />
 
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/c"/>
+                    android:src="@mipmap/ic_work_right"/>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/ll_set"
@@ -233,7 +222,7 @@
                 android:layout_height="50dp"
                 android:gravity="center_vertical"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/bg_setting_item"
+                android:background="@drawable/selector_pressed_background"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
 
@@ -251,13 +240,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="设置" />
+                    android:text="@string/str_set" />
 
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/c"/>
+                    android:src="@mipmap/ic_work_right"/>
             </LinearLayout>
 
             <TextView
@@ -270,7 +259,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/bg_exit_account"
                 android:text="安全退出"
-                android:textColor="@android:color/white"
+                android:textColor="@color/color_white"
                 android:textSize="18dp"
                 android:gravity="center"
                 android:visibility="visible" />

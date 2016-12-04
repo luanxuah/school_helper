@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
     <color name="color_cccccc">#CCCCCC</color>
     <color name="color_ececec">#ECECEC</color>
     <color name="color_6666cc">#6666CC</color>
     <color name="color_ededed">#EDEDED</color>
     <!-- 分割线 -->
-    <color name="main_divider">#dcdcdc</color>
-    <color name="main_gray">#9c9c9c</color><!-- 辅助 -->
-    <color name="main_blue">#58aeef</color><!-- 蓝色 -->
-    <color name="main_green">#09bb07</color>
-    <color name="main_hint">#bcbcbc</color><!-- 提示 -->
+    <color name="color_divider">#dcdcdc</color>
+    <color name="color_gray">#9c9c9c</color><!-- 辅助 -->
+    <color name="color_blue">#58aeef</color><!-- 蓝色 -->
+    <color name="color_green">#09bb07</color>
+    <color name="color_hint">#bcbcbc</color><!-- 提示 -->
     <color name="color_6c6c6c">#6c6c6c</color>
     <color name="color_358FD3">#358FD3</color>
     <color name="color_7E58AEEF">#7E58AEEF</color>
@@ -23,7 +20,7 @@
     <color name="color_e0e3ff">#E0E3FF</color>
     <color name="color_4889c7">#4889C7</color>
     <color name="color_80ffff">#80FFFF</color>
-    <color name="main_bg2">#f6f6f6</color>
-    <color name="light">#FFEEEEEE</color>
-    <color name="main_background">#efeff4</color>
+    <color name="color_f6f6f6">#f6f6f6</color>
+    <color name="color_light">#FFEEEEEE</color>
+    <color name="color_background">#efeff4</color>
 </resources>

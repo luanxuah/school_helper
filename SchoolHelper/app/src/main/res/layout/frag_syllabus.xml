@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/color_white"
     >
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/yms_dimens_32.0_px"
-            android:textColor="@color/main_blue"
+            android:textColor="@color/color_blue"
             android:text="第2周"
             android:padding="@dimen/yms_dimens_12.0_px"
             android:layout_centerHorizontal="true"/>
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_week"
             android:textSize="@dimen/yms_dimens_20.0_px"
-            android:textColor="@color/main_blue"
+            android:textColor="@color/color_blue"
             android:layout_centerHorizontal="true"
             android:paddingBottom="@dimen/yms_dimens_12.0_px"
             android:text="大二 第一学期"/>
@@ -36,7 +36,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/main_gray"/>
+            android:background="@color/color_gray"/>
         <LinearLayout
             android:id="@+id/weekName"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -94,7 +94,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -120,7 +120,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -146,7 +146,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -172,7 +172,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -198,7 +198,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -224,7 +224,7 @@
             <View
                 android:layout_width="0.5dp"
                 android:layout_height="40dp"
-                android:background="@color/main_gray"/>
+                android:background="@color/color_gray"/>
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -251,7 +251,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            android:background="@color/main_gray"/>
+            android:background="@color/color_gray"/>
         <ScrollView
             android:id="@+id/scrollPanel"
             android:layout_width="match_parent"
@@ -281,7 +281,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -294,7 +294,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -307,7 +307,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -320,7 +320,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -333,7 +333,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -346,7 +346,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -359,7 +359,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -372,7 +372,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -385,7 +385,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -398,7 +398,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -411,7 +411,7 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
-                        android:background="@color/main_gray"/>
+                        android:background="@color/color_gray"/>
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="@dimen/yms_dimens_80.0_px"
@@ -425,7 +425,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <!-- 周一到周日的排列 -->
                 <LinearLayout
                     android:id="@+id/weekPanel_1"
@@ -439,7 +439,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_2"
                     android:layout_width="0dp"
@@ -452,7 +452,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_3"
                     android:layout_width="0dp"
@@ -465,7 +465,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_4"
                     android:layout_width="0dp"
@@ -478,7 +478,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_5"
                     android:layout_width="0dp"
@@ -491,7 +491,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_6"
                     android:layout_width="0dp"
@@ -504,7 +504,7 @@
                 <View
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
-                    android:background="@color/main_gray"/>
+                    android:background="@color/color_gray"/>
                 <LinearLayout
                     android:id="@+id/weekPanel_7"
                     android:layout_width="0dp"

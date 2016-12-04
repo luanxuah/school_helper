@@ -12,7 +12,7 @@
     <item android:state_selected="true">
         <shape>
             <corners android:radius="8px" />
-            <stroke android:width="0dp" android:color="@color/main_divider" />
+            <stroke android:width="0dp" android:color="@color/color_divider" />
             <solid android:color="@color/color_7E58AEEF"></solid>
         </shape>
     </item>

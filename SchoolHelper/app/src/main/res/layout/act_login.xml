@@ -2,12 +2,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/color_white"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/tv_text_login"
-        android:textColor="@color/black"
+        android:textColor="@color/color_black"
         android:textSize="@dimen/yms_dimens_36.0_px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
 
     <com.luanxu.custom.RoundCornerImageView
         android:id="@+id/iv_head"
-        android:textColor="@color/black"
+        android:textColor="@color/color_black"
         android:textSize="@dimen/yms_dimens_36.0_px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
 
     <TextView
         android:id="@+id/tv_name"
-        android:textColor="@color/black"
+        android:textColor="@color/color_black"
         android:textSize="@dimen/yms_dimens_28.0_px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:paddingRight="@dimen/distance_10" >
 
         <TextView
-            android:textColor="@color/black"
+            android:textColor="@color/color_black"
             android:textSize="@dimen/yms_dimens_28.0_px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -62,7 +62,7 @@
 
         <EditText
             android:id="@+id/et_username"
-            android:textColor="@color/black"
+            android:textColor="@color/color_black"
             android:textSize="@dimen/yms_dimens_28.0_px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -75,7 +75,7 @@
             android:paddingLeft="@dimen/distance_20"
             android:paddingRight="@dimen/distance_20"
             android:singleLine="true"
-            android:textColorHint="@color/main_hint"
+            android:textColorHint="@color/color_hint"
             android:textCursorDrawable="@null" />
 
         <com.luanxu.custom.percent.PercentLinearLayout
@@ -100,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginLeft="@dimen/distance_10"
-        android:background="@color/main_divider" />
+        android:background="@color/color_divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -111,7 +111,7 @@
         android:paddingRight="@dimen/distance_10" >
 
         <TextView
-            android:textColor="@color/black"
+            android:textColor="@color/color_black"
             android:textSize="@dimen/yms_dimens_28.0_px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -122,7 +122,7 @@
 
         <EditText
             android:id="@+id/et_password"
-            android:textColor="@color/black"
+            android:textColor="@color/color_black"
             android:textSize="@dimen/yms_dimens_28.0_px"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -134,7 +134,7 @@
             android:paddingLeft="@dimen/distance_20"
             android:paddingRight="@dimen/distance_20"
             android:singleLine="true"
-            android:textColorHint="@color/main_hint"
+            android:textColorHint="@color/color_hint"
             android:textCursorDrawable="@null" />
 
         <com.luanxu.custom.percent.PercentLinearLayout
@@ -158,11 +158,11 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginLeft="@dimen/distance_10"
-        android:background="@color/main_divider" />
+        android:background="@color/color_divider" />
 
     <Button
         android:id="@+id/bt_login"
-        android:textColor="@color/white"
+        android:textColor="@color/color_white"
         android:textSize="@dimen/yms_dimens_32.0_px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -174,37 +174,4 @@
         android:clickable="true"
         android:onClick="login"
         android:text="@string/login" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_heightPercent="11%w"
-        android:orientation="horizontal"
-        android:paddingLeft="@dimen/distance_10"
-        android:paddingRight="@dimen/distance_10" >
-
-        <TextView
-            android:id="@+id/tv_forget_password"
-            android:textColor="@color/main_gray"
-            android:textSize="@dimen/yms_dimens_28.0_px"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_heightPercent="11%w"
-            android:clickable="true"
-            android:gravity="center_vertical|start"
-            android:text="@string/forget_password" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"/>
-        <TextView
-            android:id="@+id/tv_register"
-            android:textColor="@color/main_gray"
-            android:textSize="@dimen/yms_dimens_28.0_px"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:gravity="center_vertical|end"
-            android:text="@string/register" />
-    </LinearLayout>
 </com.luanxu.custom.percent.PercentLinearLayout>

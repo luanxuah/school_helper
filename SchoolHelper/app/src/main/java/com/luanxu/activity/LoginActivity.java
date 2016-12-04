@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
+import com.luanxu.cache.CacheUtils;
 import com.luanxu.custom.RoundCornerImageView;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.MainActivity;
@@ -29,8 +30,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     //是否输入用户名，隐藏显示相关控件
     private boolean isInputUsername = true;
 
-    //取消按钮
-    private TextView tv_cancle;
     //用户头像
     private RoundCornerImageView iv_head;
     //头像下方的用户名
@@ -45,10 +44,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private PercentLinearLayout pll_psd_close;
     //登录按钮
     private Button bt_login;
-    //忘记密码
-    private TextView tv_forget_password;
-
-    private TextView tv_register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +56,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
 
     //初始化数据和控件
     private void init(){
-        tv_cancle = (TextView) findViewById(R.id.tv_cancle);
         iv_head = (RoundCornerImageView) findViewById(R.id.iv_head);
         tv_name = (TextView) findViewById(R.id.tv_name);
         et_username = (EditText) findViewById(R.id.et_username);
@@ -72,10 +66,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         pll_psd_close = (PercentLinearLayout) findViewById(R.id.pll_psd_close);
         bt_login = (Button) findViewById(R.id.bt_login);
         bt_login.setOnClickListener(this);
-        tv_forget_password = (TextView) findViewById(R.id.tv_forget_password);
-        tv_forget_password.setOnClickListener(this);
-        tv_register = (TextView) findViewById(R.id.tv_register);
-        tv_register.setOnClickListener(this);
 
         setListener();
     }
@@ -141,14 +131,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            //忘记密码
-            case R.id.tv_forget_password:
-
-                break;
-            //注册
-            case R.id.tv_register:
-
                 break;
         }
     }

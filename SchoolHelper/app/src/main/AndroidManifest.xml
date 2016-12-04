@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name="com.luanxu.application.SchoolHelperApplication"
@@ -22,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 数据库内容提供者 -->
+        <provider
+            android:authorities="com.luanxu.cache.CacheProvider"
+            android:name="com.luanxu.cache.CacheProvider"
+            android:exported="true">
+        </provider>
         <activity android:name=".ExampleActivity"></activity>
         <activity android:name="com.luanxu.activity.SyllabusActivity"></activity>
         <!-- 登录页面 -->
@@ -30,6 +37,8 @@
         <activity android:name="com.luanxu.schoolhelper.MainActivity"></activity>
         <!-- 学分页面 -->
         <activity android:name="com.luanxu.activity.CreditActivity"></activity>
+        <!-- 学分页面 -->
+        <activity android:name="com.luanxu.activity.PersonalDetailsActivity"></activity>
     </application>
 
 </manifest>

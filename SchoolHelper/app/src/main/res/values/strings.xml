@@ -7,8 +7,7 @@
     <string name="phone_hint">请输入手机号</string>
     <string name="password">密码</string>
     <string name="password_hint">请填写密码</string>
-    <string name="forget_password">忘记密码？</string>
-    <string name="register">注册</string>
+
     <string name="reference">参考</string>
     <string name="continue_edu">继教</string>
     <string name="patient_edu">患教</string>
@@ -18,4 +17,26 @@
     <string name="credit">学分</string>
     <string name="credit_satisfy">恭喜您，您的学分已满足毕业资格！</string>
     <string name="credit_dissatisfy">对不起，您的学分暂时不满足毕业资格，加油哟！</string>
+    
+    <string name="str_syllabus">课表</string>
+    <string name="str_information">资讯</string>
+    <string name="str_community">社区</string>
+    
+    <!-- 我的页面 -->
+    <string name="str_personal_msg">个人信息</string>
+    <string name="str_credit_query">学分查询</string>
+    <string name="str_score_query">分数查询</string>
+    <string name="str_empty_classroom">空教室</string>
+    <string name="str_collect">收藏</string>
+    <string name="str_set">设置</string>
+    <string name="str_logout">安全退出</string>
+    <string name="str_head">头像</string>
+    <string name="str_name">姓名</string>
+    <string name="str_academy">学院</string>
+    <string name="str_class">班级</string>
+    <string name="str_sex">性别</string>
+    <string name="str_birth_date">出生日期</string>
+    <string name="str_politics_status">政治面貌</string>
+    <string name="str_phone_num">手机号码</string>
+    <string name="str_email">电子邮箱</string>
 </resources>

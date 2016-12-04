@@ -35,11 +35,11 @@ public class TitleBar {
 	public void setTitle(String title, int color) {
 		if (!TextUtils.isEmpty(title)) {
 			titleTxt.setBackgroundResource(0);
-			titleTxt.setTextColor(mActivity.getResources().getColor(R.color.white));
+			titleTxt.setTextColor(mActivity.getResources().getColor(R.color.color_white));
 			titleTxt.setText(title);
 		}
 		if (color > 0) {
-			titleTxt.setTextColor(mActivity.getResources().getColor(R.color.white));
+			titleTxt.setTextColor(mActivity.getResources().getColor(R.color.color_white));
 		}
 	}
 
@@ -55,7 +55,7 @@ public class TitleBar {
 	/**白色字体*/
 	public void setTitle(String str) {
 		titleTxt.setText(str);
-		titleTxt.setTextColor(mActivity.getResources().getColor(R.color.white));
+		titleTxt.setTextColor(mActivity.getResources().getColor(R.color.color_white));
 	}
 
 	public void setBackground(int index) {
@@ -95,7 +95,7 @@ public class TitleBar {
 		backBtn.setVisibility(View.VISIBLE);
 		if (!TextUtils.isEmpty(backStr)) { 
 			backBtn.setText(backStr);
-			backBtn.setTextColor(mActivity.getResources().getColor(R.color.white));
+			backBtn.setTextColor(mActivity.getResources().getColor(R.color.color_white));
 		}
 
 		if (icon > 0) { // 设置图片在文字的左边
