@@ -1,26 +1,28 @@
 <resources>
-    <string name="app_name">SchoolHelper</string>
-    <string name="cancle">取消</string>
-    <string name="ok">确定</string>
-    <string name="login">登录</string>
-    <string name="account">账号</string>
-    <string name="phone_hint">请输入手机号</string>
-    <string name="password">密码</string>
-    <string name="password_hint">请填写密码</string>
 
-    <string name="reference">参考</string>
-    <string name="continue_edu">继教</string>
-    <string name="patient_edu">患教</string>
-    <string name="patient_edu_detail">患教详情</string>
-    <string name="me">我</string>
-    <string name="current_tag">CURRENTTAG</string>
-    <string name="credit">学分</string>
-    <string name="credit_satisfy">恭喜您，您的学分已满足毕业资格！</string>
-    <string name="credit_dissatisfy">对不起，您的学分暂时不满足毕业资格，加油哟！</string>
-    
+    <!--其他页面-->
+    <string name="app_name">SchoolHelper</string>
+    <string name="str_prompt">提示</string>
+    <string name="str_out_of_application">是否退出应用?</string>
+    <string name="str_ok">确定</string>
+    <string name="str_cancle">取消</string>
+
+
+    <!-- 登录页面 -->
+    <string name="str_login">登录</string>
+    <string name="str_account">账号</string>
+    <string name="str_phone_hint">请输入手机号</string>
+    <string name="str_password">密码</string>
+    <string name="str_password_hint">请填写密码</string>
+
+    <!-- 主页面-->
     <string name="str_syllabus">课表</string>
     <string name="str_information">资讯</string>
     <string name="str_community">社区</string>
+    <string name="str_me">我</string>
+
+    <!-- 课表页面 -->
+    <string name="str_update">修改</string>
     
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
@@ -30,6 +32,8 @@
     <string name="str_collect">收藏</string>
     <string name="str_set">设置</string>
     <string name="str_logout">安全退出</string>
+
+    <!-- 个人信息 -->
     <string name="str_head">头像</string>
     <string name="str_name">姓名</string>
     <string name="str_academy">学院</string>
@@ -39,4 +43,9 @@
     <string name="str_politics_status">政治面貌</string>
     <string name="str_phone_num">手机号码</string>
     <string name="str_email">电子邮箱</string>
+
+    <!-- 学分页面 -->
+    <string name="str_credit">学分</string>
+    <string name="str_credit_satisfy">恭喜您，您的学分已满足毕业资格！</string>
+    <string name="str_credit_dissatisfy">对不起，您的学分暂时不满足毕业资格，加油哟！</string>
 </resources>

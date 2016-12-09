@@ -4,17 +4,40 @@ package com.luanxu.bean;
  * Created by luanxu on 2016/11/27.
  */
 public class CourseBean {
-    private String name,room,teach,id;//课程名称、上课教室，教师，课程编号
-    int start,step; //开始上课节次， 一共几节课
+    //课程名称
+    private String name;
+    //上课教室
+    private String room;
+    //教师
+    private String teach;
+    //课程编号
+    private String id;
+    //开始上课节次
+    private int start;
+    //一共几节课
+    private int step;
+    //课程的背景
+    private int background;
+
+    public int getBackground() {
+        return background;
+    }
+
+    public void setBackground(int background) {
+        this.background = background;
+    }
+
     public CourseBean(String name, String room, int start, int step,
-                  String teach, String id) {
+                      String teach, String id, int background) {
         super();
         this.name = name;
         this.room = room;
         this.start = start;
         this.step = step;
         this.teach = teach;
+
         this.id = id;
+        this.background = background;
     }
 
     public String getId() {

@@ -15,7 +15,7 @@
     <color name="color_6c6c6c">#6c6c6c</color>
     <color name="color_358FD3">#358FD3</color>
     <color name="color_7E58AEEF">#7E58AEEF</color>
-    <color name="color_58aeef">#58aeef</color>
+
     <color name="color_999999">#999999</color>
     <color name="color_e0e3ff">#E0E3FF</color>
     <color name="color_4889c7">#4889C7</color>
@@ -23,4 +23,32 @@
     <color name="color_f6f6f6">#f6f6f6</color>
     <color name="color_light">#FFEEEEEE</color>
     <color name="color_background">#efeff4</color>
+    <color name="color_5c848484">#5c848484</color>
+    <color name="color_f15209">#f15209</color>
+    <color name="color_3589c8">#3589c8</color>
+
+    <!-- 课程透明的背景色 -->
+    <color name="color_8058aeef">#8058aeef</color>
+    <color name="color_80ed9fa0">#80ED9FA0</color>
+    <color name="color_80e3c372">#80E3C372</color>
+    <color name="color_8094d161">#8094D161</color>
+    <color name="color_808aabe9">#808AABE9</color>
+    <color name="color_8037bbac">#8037BBAC</color>
+    <color name="color_800d95b4">#800D95B4</color>
+    <color name="color_80b59fd0">#80B59FD0</color>
+    <color name="color_80f2ab8a">#80F2AB8A</color>
+    <color name="color_80e98af2">#80e98af2</color>
+    <color name="color_808ae8f2">#808ae8f2</color>
+    <!-- 课程详情的背景色 -->
+    <color name="color_58aeef">#58aeef</color>
+    <color name="color_ed9fa0">#ED9FA0</color>
+    <color name="color_e3c372">#E3C372</color>
+    <color name="color_94d161">#94D161</color>
+    <color name="color_8aabe9">#8AABE9</color>
+    <color name="color_37bbac">#37BBAC</color>
+    <color name="color_0d95b4">#0D95B4</color>
+    <color name="color_b59fd0">#B59FD0</color>
+    <color name="color_f2ab8a">#F2AB8A</color>
+    <color name="color_e98af2">#e98af2</color>
+    <color name="color_8ae8f2">#8ae8f2</color>
 </resources>

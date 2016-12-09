@@ -33,7 +33,7 @@ public class CreditActivity extends BaseActivity{
         mContext = this;
 
         TitleBar bar = getTitleBar();
-        bar.setTitle(getResources().getString(R.string.credit), R.color.color_white);
+        bar.setTitle(getResources().getString(R.string.str_credit), R.color.color_white);
 
         init();
     }

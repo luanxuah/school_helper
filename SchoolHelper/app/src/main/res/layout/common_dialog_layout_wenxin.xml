@@ -87,7 +87,7 @@
                 android:textSize="@dimen/yms_dimens_32.0_px"
                 android:background="@drawable/btn_left_bottom_radios"
                 android:gravity="center"
-                android:text="@string/cancle"
+                android:text="@string/str_cancle"
                 app:layout_heightPercent="13%w"
                 app:layout_widthPercent="25%w"
                 android:visibility="gone"/>
@@ -130,7 +130,7 @@
                 android:textSize="@dimen/yms_dimens_32.0_px"
                 android:background="@drawable/btn_right_bottom_radios"
                 android:gravity="center"
-                android:text="@string/ok"
+                android:text="@string/str_ok"
                 app:layout_heightPercent="13%w"
                 app:layout_widthPercent="25%w"
                 android:visibility="gone"/>

@@ -12,10 +12,13 @@ import android.widget.TextView;
 
 import com.luanxu.activity.CreditActivity;
 import com.luanxu.activity.PersonalDetailsActivity;
+import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.custom.CircleImageView;
+import com.luanxu.custom.CommonDialog;
 import com.luanxu.custom.PullScrollView;
 import com.luanxu.schoolhelper.R;
+import com.luanxu.utils.ResourceUtil;
 
 
 /**
@@ -27,7 +30,9 @@ import com.luanxu.schoolhelper.R;
 
 public class UserCenterFragment extends BaseFragment implements
 		PullScrollView.OnTurnListener, View.OnClickListener{
+	//上下文对象
 	private Context context;
+
 	//下方列表
 	private PullScrollView mScrollView;
 	//列表顶部
@@ -42,6 +47,9 @@ public class UserCenterFragment extends BaseFragment implements
 	private TextView tv_class;
 	//学分查询
 	private LinearLayout ll_credit;
+	//退出按钮
+	private TextView btn_logout;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,6 +81,8 @@ public class UserCenterFragment extends BaseFragment implements
 		tv_class = (TextView) view.findViewById(R.id.tv_class);
 		ll_credit = (LinearLayout) view.findViewById(R.id.ll_credit);
 		ll_credit.setOnClickListener(this);
+		btn_logout = (TextView) view.findViewById(R.id.btn_logout);
+		btn_logout.setOnClickListener(this);
 	}
 
 	@Override
@@ -84,14 +94,30 @@ public class UserCenterFragment extends BaseFragment implements
 	public void onClick(View view) {
 		Intent intent = null;
 		switch (view.getId()){
-			//点击学分查询
 			case R.id.ll_credit:
+				//点击学分查询
 				intent = new Intent(context, CreditActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.civ_head:
+				//点击头像进入个人信息页面
 				intent = new Intent(context, PersonalDetailsActivity.class);
 				startActivity(intent);
+				break;
+			case R.id.btn_logout:
+				//退出应用
+				CommonDialog commonDialog = new CommonDialog(context);
+				commonDialog.setTitle(ResourceUtil.getString(context, R.string.str_prompt));
+				commonDialog.setMessage(ResourceUtil.getString(context, R.string.str_out_of_application));
+				commonDialog.setPositiveButton(new CommonDialog.BtnClickedListener() {
+
+					@Override
+					public void onBtnClicked() {
+						SchoolHelperApplication.getInstance().exit();
+					}
+				}, ResourceUtil.getString(context, R.string.str_ok));
+				commonDialog.setCancleButton(null, ResourceUtil.getString(context, R.string.str_cancle));
+				commonDialog.showDialog();
 				break;
 		}
 	}

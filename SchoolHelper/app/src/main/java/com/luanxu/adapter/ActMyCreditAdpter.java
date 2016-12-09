@@ -2,7 +2,6 @@ package com.luanxu.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,12 +88,12 @@ public class ActMyCreditAdpter extends BaseAdapter {
 			}
 		}else{
 			if (ITEM_TOP == type) {
-				view = LayoutInflater.from(context).inflate(R.layout.row_mycredit_top_item, null);
+				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit_top, null);
 				view.setTag(ITEM_TOP);
 				initTop(view);
 			} else if (type == ITEM_DATA){
 				holder = new ViewHolder();
-				view = LayoutInflater.from(context).inflate(R.layout.row_mycredit_two_item, null);
+				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit, null);
 				holder.time = (TextView) view.findViewById(R.id.tv_time);//时间
 				holder.content = (TextView) view.findViewById(R.id.tv_content);
 				holder.credit = (TextView) view.findViewById(R.id.tv_credit);//时间
@@ -110,7 +109,7 @@ public class ActMyCreditAdpter extends BaseAdapter {
 	private void initTop(View view) {
 		magnificentChart = (MagnificentChart) view.findViewById(R.id.magnificentChart);
 		if (creditPoints > passPoints){
-			((TextView)view.findViewById(R.id.tv_date)).setText(context.getResources().getString(R.string.credit_satisfy));
+			((TextView)view.findViewById(R.id.tv_date)).setText(context.getResources().getString(R.string.str_credit_satisfy));
 		}
 
 

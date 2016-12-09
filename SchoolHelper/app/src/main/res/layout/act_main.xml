@@ -116,7 +116,7 @@
                     android:drawablePadding="-2dp"
                     android:drawableTop="@drawable/me"
                     android:gravity="center"
-                    android:text="@string/me"
+                    android:text="@string/str_me"
                     android:textColor="@color/bottom_title_color"
                     android:textSize="@dimen/word_size_12sp" />
             </FrameLayout>

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:layout_heightPercent="22%w"
         android:gravity="center"
-        android:text="@string/login" />
+        android:text="@string/str_login" />
 
     <com.luanxu.custom.RoundCornerImageView
         android:id="@+id/iv_head"
@@ -58,7 +58,7 @@
             android:layout_weight="1"
             app:layout_heightPercent="11%w"
             android:gravity="center_vertical"
-            android:text="@string/account" />
+            android:text="@string/str_account" />
 
         <EditText
             android:id="@+id/et_username"
@@ -69,7 +69,7 @@
             android:layout_weight="6"
             android:background="@null"
             android:gravity="center_vertical"
-            android:hint="@string/phone_hint"
+            android:hint="@string/str_phone_hint"
             android:inputType="phone"
             android:maxLength="13"
             android:paddingLeft="@dimen/distance_20"
@@ -118,7 +118,7 @@
             android:layout_weight="1"
             app:layout_heightPercent="11%w"
             android:gravity="center_vertical"
-            android:text="@string/password" />
+            android:text="@string/str_password" />
 
         <EditText
             android:id="@+id/et_password"
@@ -129,7 +129,7 @@
             android:layout_weight="6"
             android:background="@null"
             android:gravity="center_vertical"
-            android:hint="@string/password_hint"
+            android:hint="@string/str_password_hint"
             android:inputType="textWebPassword"
             android:paddingLeft="@dimen/distance_20"
             android:paddingRight="@dimen/distance_20"
@@ -173,5 +173,5 @@
         android:background="@drawable/bg_shape_blue_8px"
         android:clickable="true"
         android:onClick="login"
-        android:text="@string/login" />
+        android:text="@string/str_login" />
 </com.luanxu.custom.percent.PercentLinearLayout>

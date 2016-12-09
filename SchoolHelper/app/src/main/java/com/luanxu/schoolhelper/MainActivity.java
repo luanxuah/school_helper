@@ -11,19 +11,26 @@ import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
 import com.luanxu.custom.CommonDialog;
 import com.luanxu.custom.NoScrollViewPager;
+import com.luanxu.utils.ResourceUtil;
 
 /**
- * Created by 栾煦 on 2016/11/28.
+ * @author: LuanXu
+ * @createTime:2016/12/5 19:44
+ * @className:  MainActivity
+ * @Description: 主页面
  */
+
 public class MainActivity extends BaseActivity{
     // 主Activity的实例
-    private static MainActivity instance;
+    private static MainActivity context;
+
     // 回收界面用于保存状态的Tag
     private int currentTag = 0;
-    // 期刊和文章的Viewpager
-    private NoScrollViewPager contentViewPager;
     // 回收界面用于保存状态的Tag
-    private String currentTagStr;
+    private String currentTagStr = "CURRENTTAG";
+
+    // Viewpager
+    private NoScrollViewPager contentViewPager;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,8 +38,7 @@ public class MainActivity extends BaseActivity{
 
         setContentView(R.layout.act_main);
         getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        instance = this;
-        currentTagStr = getResources().getString(R.string.current_tag);
+        context = this;
 
         initView();
         initData(savedInstanceState);
@@ -148,26 +154,24 @@ public class MainActivity extends BaseActivity{
      * 退出应用
      */
     public void exitDialog() {
-        CommonDialog commonDialog = new CommonDialog(instance);
-        commonDialog.setTitle("提示");
-        commonDialog.setMessage("是否退出医学圈?");
+        CommonDialog commonDialog = new CommonDialog(context);
+        commonDialog.setTitle(ResourceUtil.getString(context, R.string.str_prompt));
+        commonDialog.setMessage(ResourceUtil.getString(context, R.string.str_out_of_application));
         commonDialog.setPositiveButton(new CommonDialog.BtnClickedListener() {
 
             @Override
             public void onBtnClicked() {
                 SchoolHelperApplication.getInstance().exit();
-
-
             }
 
-        }, "确定");
-        commonDialog.setCancleButton(null, "取消");
+        }, ResourceUtil.getString(context, R.string.str_ok));
+        commonDialog.setCancleButton(null, ResourceUtil.getString(context, R.string.str_cancle));
         commonDialog.showDialog();
     }
 
 
     public static MainActivity getInstance() {
-        return instance;
+        return context;
     }
 
     /**

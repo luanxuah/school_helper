@@ -30,7 +30,6 @@
             android:exported="true">
         </provider>
         <activity android:name=".ExampleActivity"></activity>
-        <activity android:name="com.luanxu.activity.SyllabusActivity"></activity>
         <!-- 登录页面 -->
         <activity android:name="com.luanxu.activity.LoginActivity"></activity>
         <!-- 主页面 -->
