@@ -1,23 +1,33 @@
 package com.luanxu.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.luanxu.activity.UpdateSyllabusActivity;
 import com.luanxu.adapter.FragSyllabusWeekAdapter;
 import com.luanxu.base.BaseFragment;
+import com.luanxu.bean.BottomMenuBean;
 import com.luanxu.bean.CourseBean;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.R;
+import com.luanxu.utils.CommonUtil;
 import com.luanxu.utils.DateUtils;
 import com.luanxu.utils.LogUtil;
 import com.luanxu.utils.ResourceUtil;
@@ -45,11 +55,16 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     //课程的集合
     private List courseData[]=new ArrayList[7];
     //周的集合
-    private List<String> weeks = new ArrayList<String>();
+    private List<BottomMenuBean> weeks;
     //当前周的位置
     private int newWeekPosition;
     //当前所选择的周的位置
     private int newSelectPosition;
+    //选择的学年
+    private String selectYear = "大二";
+    //选择的学期
+    private String selectTerm = "第一学期";
+
     //课程控件的背景数组
     private final Integer[] lucency_colors = {R.drawable.shape_round_58aeef, R.drawable.shape_round_ed9fa0, R.drawable.shape_round_e3c372, R.drawable.shape_round_94d161, R.drawable.shape_round_8aabe9
             , R.drawable.shape_round_37bbac, R.drawable.shape_round_0d95b4, R.drawable.shape_round_f2ab8a, R.drawable.shape_round_e98af2, R.drawable.shape_round_b59fd0};
@@ -71,8 +86,10 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     private TextView tv_days[] = new TextView[7];
     //星期和日期外部布局
     private LinearLayout ll_times[] = new LinearLayout[7];
-    //最顶部当前周数的集合
+    //最顶部当前周数的控件
     private TextView tv_week;
+    //最顶部当前学期的控件
+    private TextView tv_term;
     //当前月份
     private TextView tv_month;
     //周的列表外部布局
@@ -85,6 +102,8 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     private PercentLinearLayout pll_class_details;
     //课程详情的控件
     private TextView tv_class_details;
+    //右上角更多按钮
+    private ImageView tv_more;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -137,14 +156,17 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
         final String newWeekDayName = DateUtils.getNowWeekDay();
         for (int i=0; i< weekDaysName.length; i++){
             if (weekDaysName[i].equals(newWeekDayName)){
-                ll_times[i].setBackgroundResource(R.color.color_blue);
+                ll_times[i].setBackgroundResource(R.color.color_3589c8);
                 tv_days[i].setTextColor(ResourceUtil.getColor(context, R.color.color_white));
                 tv_weeks[i].setTextColor(ResourceUtil.getColor(context, R.color.color_white));
                 break;
             }
         }
         tv_week = (TextView) view.findViewById(R.id.tv_week);
-        tv_week.setText(weeks.get(newSelectPosition));
+        tv_week.setText(weeks.get(newSelectPosition).content);
+        tv_term = (TextView) view.findViewById(R.id.tv_term);
+        tv_term.setText(selectYear+" "+selectTerm);
+
         tv_month = (TextView) view.findViewById(R.id.tv_month);
         tv_month.setText(DateUtils.getNowMonth());
         pll_list_week = (PercentLinearLayout) view.findViewById(R.id.pll_list_week);
@@ -161,7 +183,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
                 //把列表隐藏
                 pll_list_week.setVisibility(View.GONE);
                 if (newSelectPosition == newWeekPosition){
-                    tv_week.setText(weeks.get(newSelectPosition));
+                    tv_week.setText(weeks.get(newSelectPosition).content);
                     tv_week.setTextColor(ResourceUtil.getColor(context, R.color.color_blue));
                     tv_week.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_title_week_set_icon, 0);
                 }else{
@@ -177,6 +199,85 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
         pll_class_details = (PercentLinearLayout) view.findViewById(R.id.pll_class_details);
         pll_class_details.setOnClickListener(this);
         tv_class_details = (TextView) view.findViewById(R.id.tv_class_details);
+        tv_more = (ImageView) view.findViewById(R.id.tv_more);
+        tv_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                popupWindow(view);
+            }
+        });
+    }
+    // 更多弹窗
+    private PopupWindow morePop;
+    /**
+     * @param v 控件
+     * @Description: title更多弹框
+     * @return: void
+     */
+    private void popupWindow(View v) {
+        final View popRoot = LayoutInflater.from(getActivity()).inflate(R.layout.pop_reference, null);
+        // 创建PopupWindow实例, 分别是宽度和高度
+        morePop = new PopupWindow(popRoot, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+        int[] location = new int[2];
+        v.getLocationOnScreen(location);// v是title的右部，撑满整个title的高度，是一样高的
+        morePop.showAtLocation(view.findViewById(R.id.tv_more), Gravity.NO_GRAVITY, location[0], location[1] + view.findViewById(R.id.tv_more).getHeight()-20);
+        // 点击其他地方消失
+        popRoot.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (morePop != null && morePop.isShowing()) {
+                    morePop.dismiss();
+                    morePop = null;
+                }
+                return false;
+            }
+        });
+        popRoot.setFocusable(true);
+        popRoot.setFocusableInTouchMode(true);
+        popRoot.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    morePop.dismiss();
+                    morePop = null;
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        //刷新课表
+        popRoot.findViewById(R.id.ll_refresh).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, UpdateSyllabusActivity.class);
+                intent.putExtra("week", weeks.get(newSelectPosition).content);
+                intent.putExtra("year", selectYear);
+                intent.putExtra("term", selectTerm);
+                intent.putExtra("tag", "refresh");
+                startActivityForResult(intent, 1);
+                morePop.dismiss();
+                morePop = null;
+            }
+        });
+
+        //  修改课表
+        popRoot.findViewById(R.id.ll_update).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, UpdateSyllabusActivity.class);
+                intent.putExtra("week", weeks.get(newSelectPosition).content);
+                intent.putExtra("year", selectYear);
+                intent.putExtra("term", selectTerm);
+                intent.putExtra("tag", "update");
+                startActivityForResult(intent, 2);
+                morePop.dismiss();
+                morePop = null;
+            }
+        });
+
     }
 
     public void getData(){
@@ -206,9 +307,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
         list5.add(new CourseBean("游戏设计原理","C120",8,4,"陆逊","1251", 9));
         courseData[4]=list5;
 
-        for (int i=1; i<14; i++){
-            weeks.add("第"+i+"周");
-        }
+        weeks = CommonUtil.getWeekList();
         //当前的日期
         String newDay = DateUtils.getNowDay(DateUtils.FORMAT_YYYY_LINE_MM_LINE_DD);
         //当前日期和第一周周一的时间间隔

@@ -11,7 +11,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.luanxu.activity.CreditActivity;
+import com.luanxu.activity.EmptyClassroomActivity;
 import com.luanxu.activity.PersonalDetailsActivity;
+import com.luanxu.activity.ScoreInquiryActivity;
 import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.custom.CircleImageView;
@@ -47,6 +49,10 @@ public class UserCenterFragment extends BaseFragment implements
 	private TextView tv_class;
 	//学分查询
 	private LinearLayout ll_credit;
+	//成绩查询
+	private LinearLayout ll_score;
+	//空教室查询
+	private LinearLayout ll_empty_classroom;
 	//退出按钮
 	private TextView btn_logout;
 
@@ -81,6 +87,10 @@ public class UserCenterFragment extends BaseFragment implements
 		tv_class = (TextView) view.findViewById(R.id.tv_class);
 		ll_credit = (LinearLayout) view.findViewById(R.id.ll_credit);
 		ll_credit.setOnClickListener(this);
+		ll_score = (LinearLayout) view.findViewById(R.id.ll_score);
+		ll_score.setOnClickListener(this);
+		ll_empty_classroom = (LinearLayout) view.findViewById(R.id.ll_empty_classroom);
+		ll_empty_classroom.setOnClickListener(this);
 		btn_logout = (TextView) view.findViewById(R.id.btn_logout);
 		btn_logout.setOnClickListener(this);
 	}
@@ -102,6 +112,16 @@ public class UserCenterFragment extends BaseFragment implements
 			case R.id.civ_head:
 				//点击头像进入个人信息页面
 				intent = new Intent(context, PersonalDetailsActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.ll_score:
+				//点击成绩查询
+				intent = new Intent(context, ScoreInquiryActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.ll_empty_classroom:
+				//空教室查询
+				intent = new Intent(context, EmptyClassroomActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.btn_logout:

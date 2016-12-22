@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:su="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <com.luanxu.custom.bottommenu.ScrollerNumberPicker
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        su:isEnable="false"
+        su:itemNumber="5"
+        su:lineColor="#aaaaaa"
+        su:maskHight="@dimen/yms_dimens_30.0_px"
+        su:noEmpty="false"
+        su:normalTextColor="#aaaaaa"
+        su:normalTextSize="@dimen/word_size_14sp"
+        su:selecredTextColor="#313131"
+        su:selecredTextSize="@dimen/word_size_16sp"
+        su:unitHight="40dp" />
+
+    <com.luanxu.custom.bottommenu.ScrollerNumberPicker
+        android:id="@+id/left1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        su:itemNumber="5"
+        su:lineColor="#aaaaaa"
+        su:maskHight="@dimen/yms_dimens_30.0_px"
+        su:noEmpty="true"
+        su:normalTextColor="#aaaaaa"
+        su:normalTextSize="@dimen/word_size_14sp"
+        su:selecredTextColor="#313131"
+        su:selecredTextSize="@dimen/word_size_16sp"
+        su:unitHight="40dp" />
+
+    <com.luanxu.custom.bottommenu.ScrollerNumberPicker
+        android:id="@+id/right1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:visibility="gone"
+        su:itemNumber="5"
+        su:lineColor="#aaaaaa"
+        su:maskHight="@dimen/yms_dimens_30.0_px"
+        su:noEmpty="true"
+        su:normalTextColor="#aaaaaa"
+        su:normalTextSize="@dimen/word_size_14sp"
+        su:selecredTextColor="#313131"
+        su:selecredTextSize="@dimen/word_size_16sp"
+        su:unitHight="40dp" />
+
+    <com.luanxu.custom.bottommenu.ScrollerNumberPicker
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        su:isEnable="false"
+        su:itemNumber="5"
+        su:lineColor="#aaaaaa"
+        su:maskHight="@dimen/yms_dimens_30.0_px"
+        su:noEmpty="false"
+        su:normalTextColor="#aaaaaa"
+        su:normalTextSize="@dimen/word_size_14sp"
+        su:selecredTextColor="#313131"
+        su:selecredTextSize="@dimen/word_size_16sp"
+        su:unitHight="40dp" />
+
+</com.luanxu.custom.percent.PercentLinearLayout>

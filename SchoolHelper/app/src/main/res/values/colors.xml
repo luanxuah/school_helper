@@ -26,6 +26,11 @@
     <color name="color_5c848484">#5c848484</color>
     <color name="color_f15209">#f15209</color>
     <color name="color_3589c8">#3589c8</color>
+    <color name="color_e5e5e5">#e5e5e5</color>
+    <color name="color_a1a1a1">#a1a1a1</color>
+    <color name="color_626262">#626262</color>
+    <color name="color_D8D9D9">#D8D9D9</color>
+    <color name="color_313131">#313131</color>
 
     <!-- 课程透明的背景色 -->
     <color name="color_8058aeef">#8058aeef</color>

@@ -38,6 +38,14 @@
         <activity android:name="com.luanxu.activity.CreditActivity"></activity>
         <!-- 学分页面 -->
         <activity android:name="com.luanxu.activity.PersonalDetailsActivity"></activity>
+        <!-- 修改课表页面 -->
+        <activity android:name="com.luanxu.activity.UpdateSyllabusActivity"></activity>
+        <!-- 成绩查询页面 -->
+        <activity android:name="com.luanxu.activity.ScoreInquiryActivity"></activity>
+        <!-- 成绩查询修改学期学年页面 -->
+        <activity android:name="com.luanxu.activity.SelectYearTermActivity"></activity>
+        <!-- 空教室查询页面页面 -->
+        <activity android:name="com.luanxu.activity.EmptyClassroomActivity"></activity>
     </application>
 
 </manifest>

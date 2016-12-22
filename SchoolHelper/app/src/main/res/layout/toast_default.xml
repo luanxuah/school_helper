@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/yms_dimens_550.0_px"
+        android:paddingBottom="@dimen/yms_dimens_32.0_px"
+        android:paddingLeft="@dimen/yms_dimens_40.0_px"
+        android:paddingRight="@dimen/yms_dimens_40.0_px"
+        android:paddingTop="@dimen/yms_dimens_32.0_px"
+        android:background="@drawable/img_toast_default_bg"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_marginTop="@dimen/yms_dimens_20.0_px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_favorites_h"
+            android:contentDescription="@null"
+            android:layout_marginBottom="@dimen/yms_dimens_16.0_px"
+            android:visibility="gone"
+            />
+        <TextView
+            android:id="@+id/toast_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/yms_font_32_px"/>
+
+    </LinearLayout>
+</LinearLayout>

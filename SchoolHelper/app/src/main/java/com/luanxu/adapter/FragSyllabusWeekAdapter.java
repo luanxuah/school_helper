@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.luanxu.bean.BottomMenuBean;
 import com.luanxu.schoolhelper.R;
 import com.luanxu.utils.ResourceUtil;
 
@@ -20,13 +21,13 @@ public class FragSyllabusWeekAdapter extends BaseAdapter{
     private Context context;
 
     //周的集合
-    private List<String> weeks;
+    private List<BottomMenuBean> weeks;
     //当前周的位置
     private int newWeekPosition;
     //当前选择的位置
     private int newSelectPostion;
 
-    public FragSyllabusWeekAdapter(Context context, List<String> weeks, int newWeekPosition, int newSelectPostion){
+    public FragSyllabusWeekAdapter(Context context, List<BottomMenuBean> weeks, int newWeekPosition, int newSelectPostion){
         this.context = context;
         this.weeks = weeks;
         this.newWeekPosition = newWeekPosition;
@@ -68,7 +69,7 @@ public class FragSyllabusWeekAdapter extends BaseAdapter{
         if (position == newWeekPosition){
             holder.tv_week.setText(weeks.get(position)+"（本周）");
         }else{
-            holder.tv_week.setText(weeks.get(position));
+            holder.tv_week.setText(weeks.get(position).content);
         }
         //如果是选择的周的话，设置为蓝色背景白色字体
         if (position == newSelectPostion){

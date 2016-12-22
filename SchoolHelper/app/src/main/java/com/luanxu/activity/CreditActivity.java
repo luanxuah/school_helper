@@ -2,6 +2,8 @@ package com.luanxu.activity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ListView;
 import com.luanxu.adapter.ActMyCreditAdpter;
 import com.luanxu.application.SchoolHelperApplication;
@@ -25,6 +27,8 @@ public class CreditActivity extends BaseActivity{
 
     //学分列表
     private ListView pullToRefreshListView;
+
+    private EditText et_search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,11 @@ public class CreditActivity extends BaseActivity{
         pullToRefreshListView = (ListView) findViewById(R.id.pullToRefreshListView);
         adpter=new ActMyCreditAdpter(mContext);
         pullToRefreshListView.setAdapter(adpter);
+        et_search = (EditText) findViewById(R.id.et_search);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

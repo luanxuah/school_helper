@@ -39,7 +39,7 @@ public class ActMyCreditAdpter extends BaseAdapter {
 	static final int ITEM_DATA = 1;
 
 	//学分展示控件
-	private MagnificentChart magnificentChart;
+	public MagnificentChart magnificentChart;
 	
 
 	public ActMyCreditAdpter(Context context) {
@@ -74,35 +74,51 @@ public class ActMyCreditAdpter extends BaseAdapter {
 	@Override
 	public View getView(final int position, View view, ViewGroup parent) {
 		int type = getItemViewType(position);
-		if (view != null) {
-			Object tag = view.getTag();
-			if (tag instanceof ViewHolder) {
-				holder = (ViewHolder) tag;
-			} else if (tag instanceof Integer) {
-				int tagType = (Integer) tag;
-				switch (tagType) {
-				case ITEM_TOP:
-					initTop(view);
-					break;
-				}
-			}
-		}else{
-			if (ITEM_TOP == type) {
-				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit_top, null);
-				view.setTag(ITEM_TOP);
-				initTop(view);
-			} else if (type == ITEM_DATA){
+//		if (view != null) {
+//			Object tag = view.getTag();
+//			if (tag instanceof ViewHolder) {
+//				holder = (ViewHolder) tag;
+//			} else if (tag instanceof Integer) {
+//				int tagType = (Integer) tag;
+//				switch (tagType) {
+//				case ITEM_TOP:
+//					initTop(view);
+//					break;
+//				}
+//			}
+//		}else{
+//			if (ITEM_TOP == type) {
+//				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit_top, null);
+//				view.setTag(ITEM_TOP);
+//				initTop(view);
+//			} else if (type == ITEM_DATA){
+//				holder = new ViewHolder();
+//				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit, null);
+//				holder.time = (TextView) view.findViewById(R.id.tv_time);//时间
+//				holder.content = (TextView) view.findViewById(R.id.tv_content);
+//				holder.credit = (TextView) view.findViewById(R.id.tv_credit);//时间
+//				view.setTag(holder);
+//			}
+//		}
+//		if (type == ITEM_DATA && holder != null && holder instanceof ViewHolder) {
+//
+//		}
+
+		if (type == ITEM_TOP){
+			//顶部扇形区域
+			view = LayoutInflater.from(context).inflate(R.layout.item_mycredit_top, null);
+			initTop(view);
+		}else if (type == ITEM_DATA){
+			if (view == null){
 				holder = new ViewHolder();
 				view = LayoutInflater.from(context).inflate(R.layout.item_mycredit, null);
 				holder.time = (TextView) view.findViewById(R.id.tv_time);//时间
 				holder.content = (TextView) view.findViewById(R.id.tv_content);
 				holder.credit = (TextView) view.findViewById(R.id.tv_credit);//时间
 				view.setTag(holder);
+			}else{
+				holder = (ViewHolder) view.getTag();
 			}
-		}
-		if (type == ITEM_DATA && holder != null && holder instanceof ViewHolder) {
-			   
-
 		}
 		return view;
 	}
@@ -111,8 +127,6 @@ public class ActMyCreditAdpter extends BaseAdapter {
 		if (creditPoints > passPoints){
 			((TextView)view.findViewById(R.id.tv_date)).setText(context.getResources().getString(R.string.str_credit_satisfy));
 		}
-
-
 		setShow();
 
 	}

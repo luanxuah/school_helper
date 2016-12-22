@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentLinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical" >
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="13%w"
+        android:background="@color/color_background" >
+
+        <TextView
+            android:id="@+id/cancel"
+            android:textSize="@dimen/yms_font_32_px"
+            android:textColor="@color/color_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_marginLeftPercent="3%w"
+            android:gravity="center"
+            android:paddingRight="@dimen/yms_dimens_20.0_px"
+            android:text="@string/str_cancle" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/ok"
+            android:textSize="@dimen/yms_font_32_px"
+            android:textColor="@color/color_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_marginLeftPercent="3%w"
+            app:layout_marginRightPercent="3%w"
+            android:gravity="center"
+            android:paddingLeft="@dimen/yms_dimens_20.0_px"
+            android:text="@string/str_ok" />
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_divider" />
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <com.luanxu.custom.bottommenu.LinkageMainPicker
+            android:id="@+id/left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:layout_heightPercent="50%w"
+            android:gravity="center" />
+
+        <com.luanxu.custom.bottommenu.LinkageMainPicker
+            android:id="@+id/right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:layout_heightPercent="50%w"
+            android:gravity="center" />
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+</com.luanxu.custom.percent.PercentLinearLayout>

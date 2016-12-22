@@ -123,78 +123,24 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
-                app:layout_marginLeftPercent="3%w"
-                app:layout_marginRightPercent="3%w"
                 android:background="@color/color_divider" />
 
-            <com.luanxu.custom.percent.PercentLinearLayout
-                android:id="@+id/pll_week"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_heightPercent="13%w"
-                android:background="@drawable/selector_shape_ffffff_0dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:textColor="@color/color_black"
-                    android:textSize="@dimen/yms_font_32_px"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:layout_marginLeftPercent="3%w"
-                    app:layout_marginRightPercent="3%w"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:text="当前周" />
-
-                <TextView
-                    android:id="@+id/tv_week"
-                    android:textColor="@color/color_gray"
-                    android:textSize="@dimen/yms_font_32_px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical|end"
-                    app:layout_marginRightPercent="3%w"
-                    android:hint="请选择当前周" />
-
-                <ImageView
-                    android:id="@+id/iv_week"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    app:layout_marginRightPercent="3%w"
-                    android:contentDescription="@null"
-                    android:src="@mipmap/ic_work_right"
-                    android:visibility="gone"/>
-            </com.luanxu.custom.percent.PercentLinearLayout>
         </com.luanxu.custom.percent.PercentLinearLayout>
 
-        <View
+        <Button
+            android:id="@+id/tv_complete"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="@color/color_divider" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="13%w"
-            android:background="@color/color_blue" >
-            <Button
-                android:id="@+id/btn"
-                android:textColor="@color/color_white"
-                android:textSize="@dimen/yms_font_32_px"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/selector_shape_blue_0dp"
-                android:gravity="center"
-                android:text="修改课表" />
-        </LinearLayout>
+            android:background="@drawable/bg_shape_blue_8px"
+            android:text="完成"
+            android:textSize="@dimen/yms_font_40_px"
+            android:textColor="@color/color_white"
+            android:padding="@dimen/yms_dimens_20.0_px"
+            app:layout_marginLeftPercent="10%w"
+            app:layout_marginRightPercent="10%w"
+            app:layout_marginTopPercent="10%w"/>
+
+
     </com.luanxu.custom.percent.PercentLinearLayout>
 
 </LinearLayout>

@@ -16,7 +16,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-            app:layout_marginTopPercent="5%w"
+            app:layout_marginTopPercent="3%w"
             android:background="@color/color_divider" />
 
         <!-- 添加人大代表start -->
@@ -29,9 +29,8 @@
             android:orientation="vertical"
             android:visibility="visible"
             >
-
             <com.luanxu.custom.percent.PercentLinearLayout
-                android:id="@+id/pll_year"
+                android:id="@+id/pll_campus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_heightPercent="13%w"
@@ -48,27 +47,72 @@
                     app:layout_marginRightPercent="3%w"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:text="学年" />
+                    android:text="校区" />
 
                 <TextView
-                    android:id="@+id/tv_year"
+                    android:id="@+id/tv_campus"
                     android:textColor="@color/color_gray"
                     android:textSize="@dimen/yms_font_32_px"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|end"
                     app:layout_marginRightPercent="3%w"
-                    android:hint="请选择学年" />
+                    android:hint="请选择校区" />
 
                 <ImageView
-                    android:id="@+id/iv_year"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:layout_marginRightPercent="3%w"
                     android:contentDescription="@null"
                     android:src="@mipmap/ic_work_right"
-                    android:visibility="gone"/>
+                    android:visibility="visible"/>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_marginLeftPercent="3%w"
+                app:layout_marginRightPercent="3%w"
+                android:background="@color/color_divider" />
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
+                android:background="@drawable/selector_shape_ffffff_0dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    app:layout_marginRightPercent="3%w"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:text="教室类别" />
+
+                <TextView
+                    android:id="@+id/tv_sort"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    app:layout_marginRightPercent="3%w"
+                    android:hint="请选择类别" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:layout_marginRightPercent="3%w"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_work_right"
+                    android:visibility="visible"/>
             </com.luanxu.custom.percent.PercentLinearLayout>
 
             <View
@@ -79,7 +123,7 @@
                 android:background="@color/color_divider" />
 
             <com.luanxu.custom.percent.PercentLinearLayout
-                android:id="@+id/pll_term"
+                android:id="@+id/pll_day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_heightPercent="13%w"
@@ -96,105 +140,92 @@
                     app:layout_marginRightPercent="3%w"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:text="学期" />
+                    android:text="日期" />
 
                 <TextView
-                    android:id="@+id/tv_term"
+                    android:id="@+id/tv_day"
                     android:textColor="@color/color_gray"
                     android:textSize="@dimen/yms_font_32_px"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|end"
                     app:layout_marginRightPercent="3%w"
-                    android:hint="请选择学期" />
+                    android:hint="请选择日期" />
 
                 <ImageView
-                    android:id="@+id/iv_term"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     app:layout_marginRightPercent="3%w"
                     android:contentDescription="@null"
                     android:src="@mipmap/ic_work_right"
-                    android:visibility="gone"
+                    android:visibility="visible"/>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:layout_marginLeftPercent="3%w"
+                app:layout_marginRightPercent="3%w"
+                android:background="@color/color_divider" />
+
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
+                android:background="@drawable/selector_shape_ffffff_0dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    app:layout_marginRightPercent="3%w"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:text="使用时间" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    app:layout_marginRightPercent="3%w"
+                    android:hint="请选择时间" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:layout_marginRightPercent="3%w"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_work_right"
+                    android:visibility="visible"
                     />
             </com.luanxu.custom.percent.PercentLinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                app:layout_marginLeftPercent="3%w"
-                app:layout_marginRightPercent="3%w"
-                android:background="@color/color_divider" />
 
-            <com.luanxu.custom.percent.PercentLinearLayout
-                android:id="@+id/pll_week"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_heightPercent="13%w"
-                android:background="@drawable/selector_shape_ffffff_0dp"
-                android:orientation="horizontal" >
-
-                <TextView
-                    android:textColor="@color/color_black"
-                    android:textSize="@dimen/yms_font_32_px"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:layout_marginLeftPercent="3%w"
-                    app:layout_marginRightPercent="3%w"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:text="当前周" />
-
-                <TextView
-                    android:id="@+id/tv_week"
-                    android:textColor="@color/color_gray"
-                    android:textSize="@dimen/yms_font_32_px"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical|end"
-                    app:layout_marginRightPercent="3%w"
-                    android:hint="请选择当前周" />
-
-                <ImageView
-                    android:id="@+id/iv_week"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    app:layout_marginRightPercent="3%w"
-                    android:contentDescription="@null"
-                    android:src="@mipmap/ic_work_right"
-                    android:visibility="gone"/>
-            </com.luanxu.custom.percent.PercentLinearLayout>
         </com.luanxu.custom.percent.PercentLinearLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
             android:background="@color/color_divider" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            app:layout_heightPercent="13%w"
-            android:background="@color/color_blue" >
-            <Button
-                android:id="@+id/btn"
-                android:textColor="@color/color_white"
-                android:textSize="@dimen/yms_font_32_px"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/selector_shape_blue_0dp"
-                android:gravity="center"
-                android:text="修改课表" />
-        </LinearLayout>
     </com.luanxu.custom.percent.PercentLinearLayout>
 
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:cacheColorHint="@android:color/transparent"
+        android:listSelector="@android:color/transparent"/>
 </LinearLayout>

@@ -288,7 +288,7 @@ public class MagnificentChart extends View {
             }
 
             if(globalCurrentAngle >= 360){
-                globalCurrentAngle = 0.0f;
+//                globalCurrentAngle = 0.0f;
                 canvas.rotate(-90f, rect.centerX(), rect.centerY());
                 drawItems(canvas, rect);
                 canvas.rotate(90f, rect.centerX(), rect.centerY());

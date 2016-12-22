@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/yms_dimens_20.0_px"
+    android:paddingLeft="@dimen/yms_dimens_20.0_px"
+    android:paddingRight="@dimen/yms_dimens_20.0_px">
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_shape_white_9dp"
+        android:orientation="horizontal" >
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="3%w"
+            app:layout_marginBottomPercent="3%w"
+            android:background="@color/color_white"
+            android:orientation="vertical" >
+
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%w"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="教室："/>
+                <TextView
+                    android:id="@+id/tv_classroom"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="2010506"/>
+                <com.luanxu.custom.percent.PercentLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_marginRightPercent="3%w"
+                    android:background="@color/color_white"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:textColor="@color/color_gray"
+                        android:textSize="@dimen/yms_font_30_px"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="类别："/>
+                    <TextView
+                        android:id="@+id/tv_sort"
+                        android:textColor="@color/color_gray"
+                        android:textSize="@dimen/yms_font_30_px"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="普通教室"/>
+                </com.luanxu.custom.percent.PercentLinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="3%w"
+                app:layout_marginTopPercent="3%w"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="座位数："/>
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="100"/>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+</com.luanxu.custom.percent.PercentLinearLayout>

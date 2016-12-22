@@ -23,11 +23,13 @@
 
     <!-- 课表页面 -->
     <string name="str_update">修改</string>
+    <string name="str_refresh_syllabus">刷新课表</string>
+    <string name="str_update_syllabus">修改课表</string>
     
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
     <string name="str_credit_query">学分查询</string>
-    <string name="str_score_query">分数查询</string>
+    <string name="str_score_query">成绩查询</string>
     <string name="str_empty_classroom">空教室</string>
     <string name="str_collect">收藏</string>
     <string name="str_set">设置</string>
@@ -48,4 +50,12 @@
     <string name="str_credit">学分</string>
     <string name="str_credit_satisfy">恭喜您，您的学分已满足毕业资格！</string>
     <string name="str_credit_dissatisfy">对不起，您的学分暂时不满足毕业资格，加油哟！</string>
+
+    <!-- 成绩查询页面 -->
+    <string name="str_select_year_term">选择学年学期</string>
+    <string name="str_year_is_null">学年不能为空</string>
+    <string name="str_term_is_null">学期不能为空</string>
+
+    <!-- 空教室查询 -->
+    <string name="str_search">搜索</string>
 </resources>

@@ -38,21 +38,13 @@
                 android:paddingBottom="@dimen/yms_dimens_12.0_px"
                 android:text="大二 第一学期"/>
         </LinearLayout>
-      <!--  <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/str_update"
-            android:textSize="@dimen/yms_dimens_32.0_px"
-            android:textColor="@color/color_blue"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:padding="@dimen/yms_dimens_20.0_px"/>
-            -->
         <ImageView
+            android:id="@+id/tv_more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/tab_btn_more"
+            android:src="@mipmap/img_title_more"
             android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/yms_dimens_15.0_px"
             android:layout_centerVertical="true"
             android:padding="@dimen/yms_dimens_20.0_px"/>
     </RelativeLayout>

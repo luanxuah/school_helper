@@ -10,6 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.luanxu.bean.BottomMenuBean;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 @SuppressLint("DefaultLocale")
 public class CommonUtil {
 
@@ -49,5 +55,33 @@ public class CommonUtil {
 				});
 			}
 		}
+	}
+
+	/**
+	 * 获取年的集合
+	 */
+	public static List<BottomMenuBean> getYearList(){
+		int year = Integer.valueOf(DateUtils.formatDate2String(new Date(),DateUtils.FORMAT_YYYY));
+		List<BottomMenuBean> list = new ArrayList<BottomMenuBean>();
+		for (int i = year+5; i > 1900; i--) {
+			BottomMenuBean object = new BottomMenuBean();
+			object.id="" + i;
+			object.content = i+ "";
+			list.add(object);
+		}
+		return list;
+	}
+
+	/**
+	 * 获取周的集合
+	 * @return
+     */
+	public static List<BottomMenuBean> getWeekList(){
+		List<BottomMenuBean> weekList = new ArrayList<BottomMenuBean>();
+		for (int i=1; i<15; i++){
+			BottomMenuBean bean = new BottomMenuBean(i+"", "第"+i+"周");
+			weekList.add(bean);
+		}
+		return weekList;
 	}
 }

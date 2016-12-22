@@ -119,6 +119,7 @@ public class DateUtils {
     /**
      *  获取制定字符串n天前或之后的日期
      * @param datestr 日期字符串
+     * @param format 日期字符串格式
      * @param day  相对天数，为正数表示之后，为负数表示之前
      * @return 指定日期字符串n天之前或者之后的日期
      */
@@ -131,6 +132,33 @@ public class DateUtils {
         } catch (ParseException e) {
             throw new RuntimeException("日期转换错误");
         }
+        Calendar cal = new GregorianCalendar();
+        cal.setTime(olddate);
+
+        int Year = cal.get(Calendar.YEAR);
+        int Month = cal.get(Calendar.MONTH);
+        int Day = cal.get(Calendar.DAY_OF_MONTH);
+
+        int NewDay = Day + day;
+
+        cal.set(Calendar.YEAR, Year);
+        cal.set(Calendar.MONTH, Month);
+        cal.set(Calendar.DAY_OF_MONTH, NewDay);
+
+        return new java.sql.Date(cal.getTimeInMillis());
+    }
+
+    /**
+     *  获取当前日期n天前或之后的日期
+     * @param format 日期字符串格式
+     * @param day  相对天数，为正数表示之后，为负数表示之前
+     * @return 指定日期字符串n天之前或者之后的日期
+     */
+    public static java.sql.Date getBeforeAfterNowDate(String format, int day) {
+        SimpleDateFormat df = new SimpleDateFormat(format);
+        df.setLenient(false);
+        java.sql.Date olddate = new java.sql.Date(new Date().getTime());
+
         Calendar cal = new GregorianCalendar();
         cal.setTime(olddate);
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 规范后 -->
+    <item android:state_selected="true"><shape>
+            <!-- 半径 -->
+            <corners android:bottomLeftRadius="0dp" android:bottomRightRadius="5dp" android:topLeftRadius="0dp" android:topRightRadius="5dp" />
+            <!-- 边框 -->
+            <stroke android:width="0.5dp" android:color="#ffffff" />
+            <!-- 填充的颜色 -->
+            <solid android:color="#ffffff"></solid>
+        </shape></item>
+    <item><shape>
+
+            <!-- 半径 -->
+           <corners android:bottomLeftRadius="0dp" android:bottomRightRadius="5dp" android:topLeftRadius="0dp" android:topRightRadius="5dp" />
+            <stroke android:width="0.5dp" android:color="#ffffff" />
+            <!-- 填充的颜色 -->
+            <solid android:color="#00ffffff"></solid>
+        </shape></item>
+
+</selector>
