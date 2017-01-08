@@ -10,8 +10,8 @@
         android:id="@+id/bg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_heightPercent="12.5%w"
-        android:background="@drawable/bg_title"
+        app:layout_heightPercent="15%w"
+        android:background="@color/color_blue"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 

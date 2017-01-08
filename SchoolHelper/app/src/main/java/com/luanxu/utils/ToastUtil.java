@@ -36,7 +36,7 @@ public class ToastUtil {
             result.setGravity(Gravity.CENTER, 0, 0);
         }else{
             iv.setVisibility(View.GONE);
-            int distance = CommonUtil.getDeviceSize(act).y * 30/ 100;
+            int distance = CommonUtils.getDeviceSize(act).y * 30/ 100;
             result.setGravity(Gravity.NO_GRAVITY, 0, distance);
         }
         tips.setText(msg);
@@ -58,7 +58,7 @@ public class ToastUtil {
             toast.setGravity(Gravity.CENTER, 0, 0);
         }else{
             iv.setVisibility(View.GONE);
-            int distance = CommonUtil.getDeviceSize(context).y * 30/ 100;
+            int distance = CommonUtils.getDeviceSize(context).y * 30/ 100;
             toast.setGravity(Gravity.NO_GRAVITY, 0, distance);
         }
         tips.setText(msg);

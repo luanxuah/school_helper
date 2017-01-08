@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -13,12 +12,11 @@ import android.widget.TextView;
 
 import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
-import com.luanxu.cache.CacheUtils;
 import com.luanxu.custom.RoundCornerImageView;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.MainActivity;
 import com.luanxu.schoolhelper.R;
-import com.luanxu.utils.CommonUtil;
+import com.luanxu.utils.CommonUtils;
 
 /**
  * Created by 栾煦 on 2016/11/28.
@@ -78,7 +76,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // 消除文本
-                CommonUtil.eliminateText(et_username,pll_phone_close);
+                CommonUtils.eliminateText(et_username,pll_phone_close);
             }
 
             @Override
@@ -113,7 +111,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // 消除文本
-                CommonUtil.eliminateText(et_password,pll_psd_close);
+                CommonUtils.eliminateText(et_password,pll_psd_close);
             }
 
             @Override

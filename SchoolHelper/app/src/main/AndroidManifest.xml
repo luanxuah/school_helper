@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
 
     <application
         android:name="com.luanxu.application.SchoolHelperApplication"
@@ -16,7 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!-- 启动页 -->
-        <activity android:name="com.luanxu.activity.StartActivity">
+        <activity android:name="com.luanxu.activity.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,23 +32,89 @@
             android:name="com.luanxu.cache.CacheProvider"
             android:exported="true">
         </provider>
-        <activity android:name=".ExampleActivity"></activity>
+
+        <activity
+            android:name=".ExampleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 登录页面 -->
-        <activity android:name="com.luanxu.activity.LoginActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 主页面 -->
-        <activity android:name="com.luanxu.schoolhelper.MainActivity"></activity>
+        <activity
+            android:name="com.luanxu.schoolhelper.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 学分页面 -->
-        <activity android:name="com.luanxu.activity.CreditActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.CreditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 学分页面 -->
-        <activity android:name="com.luanxu.activity.PersonalDetailsActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.PersonalDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 修改课表页面 -->
-        <activity android:name="com.luanxu.activity.UpdateSyllabusActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.UpdateSyllabusActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 成绩查询页面 -->
-        <activity android:name="com.luanxu.activity.ScoreInquiryActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.ScoreInquiryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 成绩查询修改学期学年页面 -->
-        <activity android:name="com.luanxu.activity.SelectYearTermActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.SelectYearTermActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 空教室查询页面页面 -->
-        <activity android:name="com.luanxu.activity.EmptyClassroomActivity"></activity>
+        <activity
+            android:name="com.luanxu.activity.EmptyClassroomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 设置页面 -->
+        <activity
+            android:name="com.luanxu.activity.SetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 帮助和反馈页面 -->
+        <activity
+            android:name="com.luanxu.activity.HelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 修改密码页面 -->
+        <activity
+            android:name="com.luanxu.activity.ChangePasswardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 校内活动页面 -->
+        <activity
+            android:name="com.luanxu.activity.MovementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 校内活动页面 -->
+        <activity
+            android:name="com.luanxu.activity.MovementDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
     </application>
 
 </manifest>

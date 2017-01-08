@@ -25,6 +25,10 @@
     <string name="str_update">修改</string>
     <string name="str_refresh_syllabus">刷新课表</string>
     <string name="str_update_syllabus">修改课表</string>
+
+    <!-- 社区页面 -->
+    <string name="str_movement">校内活动</string>
+    <string name="str_movement_detail">活动详情</string>
     
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
@@ -58,4 +62,37 @@
 
     <!-- 空教室查询 -->
     <string name="str_search">搜索</string>
+
+    <!-- 设置 -->
+    <string name="str_update_passward">修改密码</string>
+    <string name="str_clear_cache">清除缓存</string>
+    <string name="str_help">帮助和反馈</string>
+    <string name="str_update_app">检查新版本</string>
+    <string name="str_about">关于</string>
+    <string name="str_telephone">联系电话</string>
+    <string name="str_phone">电话</string>
+    <string name="str_qq">联系QQ</string>
+    <string name="str_update_passward_prompt">温馨提示：为了您的数据安全，修改密码前请填写原始密码。</string>
+    <string name="str_last_passward">原始密码</string>
+    <string name="str_please_write_last_passward">请输入原始密码</string>
+    <string name="new_password">新密码</string>
+    <string name="please_input_password">请输入密码</string>
+    <string name="confirm_password">确认密码</string>
+    <string name="please_input_password_again">再次输入密码</string>
+    <string name="confirm">确认</string>
+    <string name="str_clear_cache_prompt">缓存的重要文件清空，视频文件、音频文件、图片。可清除缓存</string>
+    <string name="str_warm_prompt">温馨提示</string>
+    <string name="str_clear_cache_success">清除缓存成功</string>
+    <string name="str_clear_cache_error">清除缓存失败,请手动清除!</string>
+    <string name="str_no_cache">暂无缓存</string>
+    <string name="yxck_find_new_version">发现新版本</string>
+    <string name="update_cotent">更新内容:</string>
+    <string name="update_right_away">立即升级</string>
+
+    <!-- 上下拉刷新 -->
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="loading">加载中</string>
+    <string name="pull_down_refresh">下拉刷新</string>
+    <string name="last_update">上次更新</string>
 </resources>

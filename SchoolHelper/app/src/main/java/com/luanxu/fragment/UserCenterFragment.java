@@ -14,6 +14,7 @@ import com.luanxu.activity.CreditActivity;
 import com.luanxu.activity.EmptyClassroomActivity;
 import com.luanxu.activity.PersonalDetailsActivity;
 import com.luanxu.activity.ScoreInquiryActivity;
+import com.luanxu.activity.SetActivity;
 import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.custom.CircleImageView;
@@ -53,6 +54,8 @@ public class UserCenterFragment extends BaseFragment implements
 	private LinearLayout ll_score;
 	//空教室查询
 	private LinearLayout ll_empty_classroom;
+	//设置
+	private LinearLayout ll_set;
 	//退出按钮
 	private TextView btn_logout;
 
@@ -91,6 +94,8 @@ public class UserCenterFragment extends BaseFragment implements
 		ll_score.setOnClickListener(this);
 		ll_empty_classroom = (LinearLayout) view.findViewById(R.id.ll_empty_classroom);
 		ll_empty_classroom.setOnClickListener(this);
+		ll_set = (LinearLayout) view.findViewById(R.id.ll_set);
+		ll_set.setOnClickListener(this);
 		btn_logout = (TextView) view.findViewById(R.id.btn_logout);
 		btn_logout.setOnClickListener(this);
 	}
@@ -122,6 +127,11 @@ public class UserCenterFragment extends BaseFragment implements
 			case R.id.ll_empty_classroom:
 				//空教室查询
 				intent = new Intent(context, EmptyClassroomActivity.class);
+				startActivity(intent);
+				break;
+			case R.id.ll_set:
+				//设置
+				intent = new Intent(context, SetActivity.class);
 				startActivity(intent);
 				break;
 			case R.id.btn_logout:

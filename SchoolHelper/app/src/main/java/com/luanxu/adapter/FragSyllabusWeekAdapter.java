@@ -67,7 +67,7 @@ public class FragSyllabusWeekAdapter extends BaseAdapter{
         }
         //如果是本周的话，加上本周字样
         if (position == newWeekPosition){
-            holder.tv_week.setText(weeks.get(position)+"（本周）");
+            holder.tv_week.setText(weeks.get(position).content+"（本周）");
         }else{
             holder.tv_week.setText(weeks.get(position).content);
         }

@@ -3,6 +3,7 @@ package com.luanxu.schoolhelper;
 import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
 
+import com.luanxu.fragment.CommunityFragment;
 import com.luanxu.fragment.SyllabusFragment;
 import com.luanxu.fragment.UserCenterFragment;
 
@@ -32,7 +33,7 @@ public class FragmentFactory {
 				baseFragment = new SyllabusFragment();
 				break;
 			case 2:
-				baseFragment = new SyllabusFragment();
+				baseFragment = new CommunityFragment();
 				break;
 			case 3:
 				baseFragment = new UserCenterFragment();

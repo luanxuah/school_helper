@@ -1,0 +1,9 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="pullToRefreshProgressStyle">
+        <item name="android:indeterminateDrawable">@drawable/rotate_pull_to_refresh_loading</item>
+        <item name="android:minWidth">@dimen/yms_dimens_60.0_px</item>
+        <item name="android:maxWidth">@dimen/yms_dimens_60.0_px</item>
+        <item name="android:minHeight">@dimen/yms_dimens_60.0_px</item>
+        <item name="android:maxHeight">@dimen/yms_dimens_60.0_px</item>
+    </style>
+</resources>

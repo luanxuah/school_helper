@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.luanxu.schoolhelper.R;
-import com.luanxu.utils.CommonUtil;
+import com.luanxu.utils.CommonUtils;
 
 import java.util.Stack;
 
@@ -70,7 +70,7 @@ public class CommonDialog extends Dialog {
         WindowManager.LayoutParams wl = window.getAttributes();
         wl.x = 0;
         wl.y = 0;
-        wl.width = (int) (CommonUtil.getDeviceSize(context).x * 0.8);
+        wl.width = (int) (CommonUtils.getDeviceSize(context).x * 0.8);
         dialog.onWindowAttributesChanged(wl);
     }
 

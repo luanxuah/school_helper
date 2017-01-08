@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/head_contentLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingBottom="6dip"
+        android:paddingTop="@dimen/yms_dimens_12.0_px" >
+
+        <!-- 提示、最近更新 -->
+
+        <LinearLayout
+            android:id="@+id/head_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!-- 提示 -->
+
+            <TextView
+                android:id="@+id/head_tipsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pull_down_refresh"
+                android:textSize="@dimen/word_size_18sp" 
+                android:textColor="#818181"/>
+
+            <!-- 最近更新 -->
+
+            <TextView
+                android:id="@+id/head_lastUpdatedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_update"
+                android:textSize="@dimen/word_size_14sp"
+                android:textColor="#818181"/>
+        </LinearLayout>
+
+        <!-- 箭头 -->
+
+        <ImageView
+            android:id="@+id/head_arrowImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/yms_dimens_16.0_px"
+            android:layout_toLeftOf="@id/head_tips"
+            android:scaleType="center"
+            android:src="@mipmap/pull_arrow_icon" />
+
+        <!-- 进度条 -->
+        <ProgressBar
+            android:id="@+id/head_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateDuration="800" 
+            style="@style/pullToRefreshProgressStyle"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/yms_dimens_30.0_px"
+            android:layout_toLeftOf="@id/head_tips"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

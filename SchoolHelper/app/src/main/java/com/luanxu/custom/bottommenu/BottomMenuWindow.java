@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.luanxu.schoolhelper.R;
-import com.luanxu.utils.CommonUtil;
+import com.luanxu.utils.CommonUtils;
 
 public class BottomMenuWindow {
 	private Activity mActivity = null;
@@ -39,8 +39,8 @@ public class BottomMenuWindow {
 		// 设置窗口大小和位置
 		WindowManager.LayoutParams wl = window.getAttributes();
 		wl.x = 0;
-		wl.y = CommonUtil.getDeviceSize(mActivity).y;
-		wl.width = CommonUtil.getDeviceSize(mActivity).x;
+		wl.y = CommonUtils.getDeviceSize(mActivity).y;
+		wl.width = CommonUtils.getDeviceSize(mActivity).x;
 		mDialog.onWindowAttributesChanged(wl);
 		// 点击窗口以外区域，关闭窗口
 		mDialog.setCanceledOnTouchOutside(true);

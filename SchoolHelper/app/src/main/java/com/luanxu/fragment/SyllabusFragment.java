@@ -18,7 +18,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.luanxu.activity.UpdateSyllabusActivity;
 import com.luanxu.adapter.FragSyllabusWeekAdapter;
@@ -27,9 +26,8 @@ import com.luanxu.bean.BottomMenuBean;
 import com.luanxu.bean.CourseBean;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.R;
-import com.luanxu.utils.CommonUtil;
+import com.luanxu.utils.CommonUtils;
 import com.luanxu.utils.DateUtils;
-import com.luanxu.utils.LogUtil;
 import com.luanxu.utils.ResourceUtil;
 
 import java.util.ArrayList;
@@ -104,6 +102,8 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     private TextView tv_class_details;
     //右上角更多按钮
     private ImageView tv_more;
+    //蒙板
+    private View view_gray;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -162,6 +162,8 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
                 break;
             }
         }
+        view_gray = view.findViewById(R.id.view);
+        view_gray.setOnClickListener(this);
         tv_week = (TextView) view.findViewById(R.id.tv_week);
         tv_week.setText(weeks.get(newSelectPosition).content);
         tv_term = (TextView) view.findViewById(R.id.tv_term);
@@ -187,7 +189,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
                     tv_week.setTextColor(ResourceUtil.getColor(context, R.color.color_blue));
                     tv_week.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_title_week_set_icon, 0);
                 }else{
-                    tv_week.setText(weeks.get(newSelectPosition)+"（非本周）");
+                    tv_week.setText(weeks.get(newSelectPosition).content+"（非本周）");
                     tv_week.setTextColor(ResourceUtil.getColor(context, R.color.color_f15209));
                     tv_week.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.mipmap.ic_title_week_set_orange_icon, 0);
                 }
@@ -215,6 +217,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
      * @return: void
      */
     private void popupWindow(View v) {
+        view_gray.setVisibility(View.VISIBLE);
         final View popRoot = LayoutInflater.from(getActivity()).inflate(R.layout.pop_reference, null);
         // 创建PopupWindow实例, 分别是宽度和高度
         morePop = new PopupWindow(popRoot, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
@@ -278,6 +281,13 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
             }
         });
 
+        morePop.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                view_gray.setVisibility(View.GONE);
+            }
+        });
+
     }
 
     public void getData(){
@@ -307,7 +317,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
         list5.add(new CourseBean("游戏设计原理","C120",8,4,"陆逊","1251", 9));
         courseData[4]=list5;
 
-        weeks = CommonUtil.getWeekList();
+        weeks = CommonUtils.getWeekList();
         //当前的日期
         String newDay = DateUtils.getNowDay(DateUtils.FORMAT_YYYY_LINE_MM_LINE_DD);
         //当前日期和第一周周一的时间间隔
@@ -395,6 +405,8 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
             case R.id.pll_class_details:
                 pll_class_details.setVisibility(View.GONE);
                 break;
+            case R.id.view:
+                view_gray.setVisibility(View.GONE);
         }
     }
 }

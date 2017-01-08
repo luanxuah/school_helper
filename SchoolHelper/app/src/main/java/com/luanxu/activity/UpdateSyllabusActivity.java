@@ -15,7 +15,7 @@ import com.luanxu.custom.TitleBar;
 import com.luanxu.custom.bottommenu.LinkageCommontBottomMenu;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.R;
-import com.luanxu.utils.CommonUtil;
+import com.luanxu.utils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -155,7 +155,7 @@ public class UpdateSyllabusActivity extends BaseActivity implements View.OnClick
             case R.id.pll_week:
                 //点击当期周
                 buttonMenu = new LinkageCommontBottomMenu(this);
-                buttonMenu.setData1(CommonUtil.getWeekList(), week);
+                buttonMenu.setData1(CommonUtils.getWeekList(), week);
                 buttonMenu.setListener1(new LinkageCommontBottomMenu.LinkageCommontBottomMenuListener1() {
 
                     @Override
