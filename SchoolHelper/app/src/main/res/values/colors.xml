@@ -60,4 +60,9 @@
     <color name="color_f2ab8a">#F2AB8A</color>
     <color name="color_e98af2">#e98af2</color>
     <color name="color_8ae8f2">#8ae8f2</color>
+
+
+    <color name="color_viewfinder_mask">#60000000</color>
+    <color name="color_result_view">#b0000000</color>
+    <color name="color_possible_result_points">#c0ffff00</color>
 </resources>

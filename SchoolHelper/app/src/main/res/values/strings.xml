@@ -29,6 +29,8 @@
     <!-- 社区页面 -->
     <string name="str_movement">校内活动</string>
     <string name="str_movement_detail">活动详情</string>
+    <string name="str_release">发布</string>
+    <string name="str_message">消息</string>
     
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
@@ -95,4 +97,11 @@
     <string name="loading">加载中</string>
     <string name="pull_down_refresh">下拉刷新</string>
     <string name="last_update">上次更新</string>
+
+
+
+    <string name="scan_text"></string>
+    <string name="str_open_camera_power">开启相机权限</string>
+    <string name="str_open_camera_power_primpt">打开相机失败，请尝试按以下路径开启相机权限：\n方法一，安全中心→授权管理→应用权限管理→应用管理→校园助手→相机→允许\n方法二，360卫士→软件管理→权限管理→医学圈→相机→允许</string>
+
 </resources>

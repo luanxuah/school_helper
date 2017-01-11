@@ -62,6 +62,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     private String selectYear = "大二";
     //选择的学期
     private String selectTerm = "第一学期";
+    private String firstDayTime = "2016-11-21";
 
     //课程控件的背景数组
     private final Integer[] lucency_colors = {R.drawable.shape_round_58aeef, R.drawable.shape_round_ed9fa0, R.drawable.shape_round_e3c372, R.drawable.shape_round_94d161, R.drawable.shape_round_8aabe9
@@ -72,8 +73,8 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
 
     //课程表周数的适配器
     private FragSyllabusWeekAdapter adapter;
-
-    private String firstDayTime = "2016-11-21";
+    // 更多弹窗
+    private PopupWindow morePop;
 
     private View view;
     //每天课程外部包裹控件的数组
@@ -209,8 +210,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
             }
         });
     }
-    // 更多弹窗
-    private PopupWindow morePop;
+
     /**
      * @param v 控件
      * @Description: title更多弹框

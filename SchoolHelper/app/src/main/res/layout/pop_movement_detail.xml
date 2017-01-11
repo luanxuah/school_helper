@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 已适配  Sing -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        app:layout_marginRightPercent="5%w"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_top" />
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        app:layout_marginRightPercent="2%w"
+        app:layout_marginTopPercent="2%w"
+        app:layout_widthPercent="25%w"
+        android:background="@drawable/selector_shape_white_9dp"
+        android:orientation="vertical" >
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:id="@+id/ll_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="40%w"
+            app:layout_marginLeftPercent="11%w"
+            app:layout_marginRightPercent="11%w"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <TextView
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/yms_font_28_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="7.4%w"
+                android:gravity="center"
+                android:text="@string/str_release" />
+        </com.luanxu.custom.percent.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            app:layout_marginLeftPercent="11%w"
+            app:layout_marginRightPercent="11%w"
+            android:background="@color/color_blue" />
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="40%w"
+            app:layout_marginLeftPercent="11%w"
+            app:layout_marginRightPercent="11%w"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:textColor="@color/color_blue"
+                android:textSize="@dimen/yms_font_28_px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginLeftPercent="7.4%w"
+                android:gravity="center"
+                android:text="@string/str_message" />
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+</com.luanxu.custom.percent.PercentFrameLayout>
