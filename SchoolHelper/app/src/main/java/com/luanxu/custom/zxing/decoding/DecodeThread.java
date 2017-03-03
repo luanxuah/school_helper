@@ -21,7 +21,7 @@ import android.os.Looper;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
-import com.luanxu.activity.MipcaActivityCapture;
+import com.luanxu.activity.community.MipcaActivityCapture;
 
 import java.util.Hashtable;
 import java.util.Vector;

@@ -19,8 +19,12 @@ import com.luanxu.schoolhelper.R;
 import com.luanxu.utils.CommonUtils;
 
 /**
- * Created by 栾煦 on 2016/11/28.
+ * @author: LuanXu
+ * @createTime:2017/3/3 11:50
+ * @className:  LoginActivity
+ * @Description: 登录页面
  */
+
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
     //上下文对象
     private Activity context;

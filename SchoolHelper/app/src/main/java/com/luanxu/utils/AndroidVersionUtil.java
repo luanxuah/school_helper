@@ -117,4 +117,30 @@ public class AndroidVersionUtil {
         return false;
     }
 
+    /**
+     * 是否在5.1版本及以上
+     *
+     * @return 是否在5.1版本及以上
+     */
+    public static boolean isLollipopMR1() {
+        return Build.VERSION.SDK_INT >= 22;
+    }
+
+    /**
+     * 是否在6.0版本及以上
+     *
+     * @return 是否在6.0版本及以上
+     */
+    public static boolean isMarshmallow() {
+        return Build.VERSION.SDK_INT >= 23;
+    }
+
+    /**
+     * 是否在7.0版本及以上
+     *
+     * @return 是否在7.0版本及以上
+     */
+    public static boolean isNougat() {
+        return Build.VERSION.SDK_INT >= 24;
+    }
 }

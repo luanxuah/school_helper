@@ -54,49 +54,49 @@
 
         <!-- 学分页面 -->
         <activity
-            android:name="com.luanxu.activity.CreditActivity"
+            android:name="com.luanxu.activity.user.CreditActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 学分页面 -->
         <activity
-            android:name="com.luanxu.activity.PersonalDetailsActivity"
+            android:name="com.luanxu.activity.user.PersonalDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 修改课表页面 -->
         <activity
-            android:name="com.luanxu.activity.UpdateSyllabusActivity"
+            android:name="com.luanxu.activity.syllabus.UpdateSyllabusActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 成绩查询页面 -->
         <activity
-            android:name="com.luanxu.activity.ScoreInquiryActivity"
+            android:name="com.luanxu.activity.user.ScoreInquiryActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 成绩查询修改学期学年页面 -->
         <activity
-            android:name="com.luanxu.activity.SelectYearTermActivity"
+            android:name="com.luanxu.activity.syllabus.SelectYearTermActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 空教室查询页面页面 -->
         <activity
-            android:name="com.luanxu.activity.EmptyClassroomActivity"
+            android:name="com.luanxu.activity.user.EmptyClassroomActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 设置页面 -->
         <activity
-            android:name="com.luanxu.activity.SetActivity"
+            android:name="com.luanxu.activity.user.SetActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 帮助和反馈页面 -->
         <activity
-            android:name="com.luanxu.activity.HelpActivity"
+            android:name="com.luanxu.activity.user.HelpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
@@ -108,17 +108,17 @@
 
         <!-- 校内活动页面 -->
         <activity
-            android:name="com.luanxu.activity.MovementActivity"
+            android:name="com.luanxu.activity.community.MovementActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
         <!-- 校内活动页面 -->
         <activity
-            android:name="com.luanxu.activity.MovementDetailActivity"
+            android:name="com.luanxu.activity.community.MovementDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
         <activity
-            android:name="com.luanxu.activity.MipcaActivityCapture"
+            android:name="com.luanxu.activity.community.MipcaActivityCapture"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
     </application>

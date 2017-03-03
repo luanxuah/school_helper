@@ -103,5 +103,5 @@
     <string name="scan_text"></string>
     <string name="str_open_camera_power">开启相机权限</string>
     <string name="str_open_camera_power_primpt">打开相机失败，请尝试按以下路径开启相机权限：\n方法一，安全中心→授权管理→应用权限管理→应用管理→校园助手→相机→允许\n方法二，360卫士→软件管理→权限管理→医学圈→相机→允许</string>
-
+    <string name="ing">加载数据中</string>
 </resources>

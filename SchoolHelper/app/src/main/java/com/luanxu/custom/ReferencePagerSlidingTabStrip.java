@@ -23,7 +23,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.luanxu.fragment.MessageFragment;
+import com.luanxu.fragment.message.MessageFragment;
 import com.luanxu.schoolhelper.R;
 
 import java.util.Locale;

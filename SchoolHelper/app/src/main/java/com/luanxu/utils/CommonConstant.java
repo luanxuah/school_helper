@@ -17,7 +17,14 @@ public class CommonConstant {
     public static final String APP_LOCAL_PATH_ROOT = ExternalStorageUtil.getExternalStoragePath() + File.separator +  PROJECT_NAME;
     // 缓存信息路径
     public static final String CACHE_PATH = APP_LOCAL_PATH_ROOT + "cache" + File.separator;
-
+    // 无网络的提示语
+    public static final String NO_NETWORK_HINT = "当前没有网络，请检查网络连接";
+    // 加载进度条的默认提示语
+    public static final String LOADING_MSG = "数据加载中...";
+    // Token 所在文件名
+    public static final String TOKEN_FILE_NAME = "token_file_name";
+    // Token码对应的Key
+    public static final String TOKEN_CODE_KEY = "token_code_key";
 
     public static final int auto_focus = 1;
     public static final int decode = 2;

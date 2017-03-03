@@ -26,7 +26,7 @@ import android.os.Message;
 import android.util.Log;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
-import com.luanxu.activity.MipcaActivityCapture;
+import com.luanxu.activity.community.MipcaActivityCapture;
 import com.luanxu.custom.zxing.camera.CameraManager;
 import com.luanxu.custom.zxing.view.ViewfinderResultPointCallback;
 import com.luanxu.utils.CommonConstant;

@@ -27,7 +27,7 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
-import com.luanxu.activity.MipcaActivityCapture;
+import com.luanxu.activity.community.MipcaActivityCapture;
 import com.luanxu.custom.zxing.camera.CameraManager;
 import com.luanxu.custom.zxing.camera.PlanarYUVLuminanceSource;
 import com.luanxu.utils.CommonConstant;
