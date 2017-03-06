@@ -6,264 +6,248 @@
     android:background="@color/color_background"
     android:orientation="vertical" >
 
-    <RelativeLayout
-        android:id="@+id/rl_head"
+    <include layout="@layout/title_line" />
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="360dp"
-        android:layout_marginBottom="-100dp"
-        android:layout_marginTop="-100dp"
-        android:background="@color/color_blue" >
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical" >
-
-            <com.luanxu.custom.CircleImageView
-                android:id="@+id/civ_head"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@mipmap/ic_heads_doc"
-                app:border_color="@color/color_white"
-                app:border_width="2dp" />
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                android:text="栾煦"
-                android:textColor="@color/color_white"
-                android:textSize="14dp" />
-            <LinearLayout 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingBottom="5dp"
-                >
-                <TextView
-                    android:id="@+id/tv_academy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="数学计算机科学学院"
-                    android:textColor="@color/color_white"
-                    />
-
-                <TextView 
-                    android:id="@+id/tv_class"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="软件工程"
-                    android:textSize="16sp"
-                    android:textColor="#FFFFFF"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:layout_marginLeft="10sp"
-                    />
-            </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
-
-    <com.luanxu.custom.PullScrollView
-        android:id="@+id/psv"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true"
-        android:scrollbars="none"
-        app:headerHeight="300dp"
-        app:headerVisibleHeight="100dp"
-        android:clickable="false"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        >
-
-        <LinearLayout
+        android:layout_height="match_parent">
+        <com.luanxu.custom.percent.PercentLinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/color_background"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:id="@+id/ll_credit"
+            android:orientation="vertical"
+            >
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_head"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="22.6%w"
+                app:layout_marginTopPercent="3%w"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/yms_dimens_20.0_px"
+                android:background="@drawable/selector_pressed_background">
+
+                <com.luanxu.custom.CircleImageView
+                    android:id="@+id/raiv_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="17.3%w"
+                    app:layout_widthPercent="17.3%w"
+                    android:contentDescription="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_heads_doc"
+                    />
+
+                <com.luanxu.custom.percent.PercentLinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:orientation="vertical" >
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:textColor="@color/color_313131"
+                        android:textSize="@dimen/yms_font_32_px"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:ellipsize="end"
+                        android:text="小明"/>
+
+                    <TextView
+                        android:id="@+id/tv_college"
+                        android:textColor="@color/color_313131"
+                        android:textSize="@dimen/yms_font_28_px"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="数学与计算机科学学院"/>
+                </com.luanxu.custom.percent.PercentLinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
+
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_credit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
                 android:gravity="center_vertical"
                 android:background="@drawable/selector_pressed_background"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:layout_marginTop="10dp"
+                app:layout_marginTopPercent="3%w"
+                android:padding="@dimen/yms_dimens_20.0_px"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="8%w"
+                    app:layout_widthPercent="8%w"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:textSize="16dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:textColor="@color/color_313131"
                     android:text="@string/str_credit_query" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_work_right"/>
-            </LinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_score"
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_score"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/selector_pressed_background"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
+                app:layout_marginTopPercent="3%w"
+                android:padding="@dimen/yms_dimens_20.0_px"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="8%w"
+                    app:layout_widthPercent="8%w"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:textSize="16dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:textColor="@color/color_313131"
                     android:text="@string/str_score_query" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_work_right"/>
-            </LinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_empty_classroom"
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_empty_classroom"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/selector_pressed_background"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-
+                app:layout_marginTopPercent="3%w"
+                android:padding="@dimen/yms_dimens_20.0_px"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="8%w"
+                    app:layout_widthPercent="8%w"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:textSize="16dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:textColor="@color/color_313131"
                     android:text="@string/str_empty_classroom" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_work_right"/>
-            </LinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_collect"
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_collect"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/selector_pressed_background"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-
+                app:layout_marginTopPercent="3%w"
+                android:padding="@dimen/yms_dimens_20.0_px"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="8%w"
+                    app:layout_widthPercent="8%w"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:textSize="16dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:textColor="@color/color_313131"
                     android:text="@string/str_collect" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_work_right"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/ll_set"
+            </com.luanxu.custom.percent.PercentLinearLayout>
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_set"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
                 android:gravity="center_vertical"
-                android:layout_marginTop="10dp"
                 android:background="@drawable/selector_pressed_background"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-
+                app:layout_marginTopPercent="3%w"
+                android:padding="@dimen/yms_dimens_20.0_px"
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_heightPercent="8%w"
+                    app:layout_widthPercent="8%w"
                     android:src="@mipmap/ic_launcher" />
 
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:textSize="16dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    app:layout_marginLeftPercent="3%w"
+                    android:textSize="@dimen/yms_font_32_px"
+                    android:textColor="@color/color_313131"
                     android:text="@string/str_set" />
 
                 <ImageView
-                    android:layout_marginRight="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@mipmap/ic_work_right"/>
-            </LinearLayout>
+            </com.luanxu.custom.percent.PercentLinearLayout>
 
             <TextView
                 android:id="@+id/btn_logout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="13%w"
+                app:layout_marginPercent="5%w"
                 android:background="@drawable/bg_exit_account"
                 android:text="安全退出"
                 android:textColor="@color/color_white"
-                android:textSize="18dp"
+                android:textSize="@dimen/yms_font_36_px"
                 android:gravity="center"
                 android:visibility="visible" />
-        </LinearLayout>
-    </com.luanxu.custom.PullScrollView>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </ScrollView>
 
 </LinearLayout>

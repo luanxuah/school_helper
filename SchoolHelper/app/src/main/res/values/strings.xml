@@ -21,17 +21,28 @@
     <string name="str_community">社区</string>
     <string name="str_me">我</string>
 
+    <!--*************************************************课表***************************************************************-->
+
     <!-- 课表页面 -->
     <string name="str_update">修改</string>
     <string name="str_refresh_syllabus">刷新课表</string>
     <string name="str_update_syllabus">修改课表</string>
+
+    <!--**************************************************资讯**************************************************************-->
+
+    <!-- 选择频道-->
+    <string name="str_choose_message">选择频道</string>
+    <string name="str_choose">选择</string>
+    <string name="str_choosed">已选择</string>
+
+    <!--***************************************************社区*************************************************************-->
 
     <!-- 社区页面 -->
     <string name="str_movement">校内活动</string>
     <string name="str_movement_detail">活动详情</string>
     <string name="str_release">发布</string>
     <string name="str_message">消息</string>
-    
+    <!--***************************************************我的*************************************************************-->
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
     <string name="str_credit_query">学分查询</string>
@@ -90,6 +101,8 @@
     <string name="yxck_find_new_version">发现新版本</string>
     <string name="update_cotent">更新内容:</string>
     <string name="update_right_away">立即升级</string>
+
+    <!--****************************************************************************************************************-->
 
     <!-- 上下拉刷新 -->
     <string name="load_full">已加载全部</string>

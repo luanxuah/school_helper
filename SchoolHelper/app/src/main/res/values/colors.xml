@@ -65,4 +65,9 @@
     <color name="color_viewfinder_mask">#60000000</color>
     <color name="color_result_view">#b0000000</color>
     <color name="color_possible_result_points">#c0ffff00</color>
+
+    <!-- 背景颜色渐变分类 -->
+    <color name="color_bg_green_normal">#1aad19</color>
+    <!--绿色轻按-->
+    <color name="color_bg_green_normal_pressed_light">#1a179b16</color>
 </resources>

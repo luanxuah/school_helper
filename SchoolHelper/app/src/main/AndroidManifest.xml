@@ -121,6 +121,12 @@
             android:name="com.luanxu.activity.community.MipcaActivityCapture"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 选择频道-->
+        <activity
+            android:name="com.luanxu.activity.message.ChooseMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
     </application>
 
 </manifest>

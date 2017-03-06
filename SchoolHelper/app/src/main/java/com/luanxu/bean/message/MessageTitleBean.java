@@ -12,10 +12,12 @@ import java.io.Serializable;
 public class MessageTitleBean  implements Serializable {
     private String title;
     private String id;
+    private String select;
 
-    public MessageTitleBean(String title, String id){
+    public MessageTitleBean(String title, String id, String select){
         this.title = title;
         this.id = id;
+        this.select = select;
     }
 
     public String getId() {
@@ -34,11 +36,20 @@ public class MessageTitleBean  implements Serializable {
         this.title = title;
     }
 
+    public String getSelect() {
+        return select;
+    }
+
+    public void setSelect(String select) {
+        this.select = select;
+    }
+
     @Override
     public String toString() {
         return "MessageTitleBean{" +
                 "id='" + id + '\'' +
                 ", title='" + title + '\'' +
+                ", select='" + select + '\'' +
                 '}';
     }
 }

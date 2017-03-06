@@ -1,12 +1,14 @@
 package com.luanxu.fragment.message;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.luanxu.activity.message.ChooseMessageActivity;
 import com.luanxu.adapter.message.MessagePageAdapter;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.bean.message.MessageTitleBean;
@@ -15,6 +17,7 @@ import com.luanxu.custom.TitleBar;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +30,7 @@ import java.util.List;
 
 public class MessageFragment extends BaseFragment implements View.OnClickListener{
     //上下文对象
-    private Context mActivity;
+    private Context context;
 
     public static int position = 0;
 
@@ -69,7 +72,7 @@ public class MessageFragment extends BaseFragment implements View.OnClickListene
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mActivity = getActivity();
+        context = getActivity();
 
         TitleBar bar = getTitleBar();
         bar.setTitle(getResources().getString(R.string.str_information), R.color.color_white);
@@ -97,12 +100,12 @@ public class MessageFragment extends BaseFragment implements View.OnClickListene
      */
     private void initDate(){
         titles = new ArrayList<MessageTitleBean>();
-        MessageTitleBean bean1 = new MessageTitleBean("安徽师范大学", "11");
-        MessageTitleBean bean2 = new MessageTitleBean("安徽师范大学学生会", "11");
-        MessageTitleBean bean3 = new MessageTitleBean("安徽师范大学数计学院", "11");
-        MessageTitleBean bean4 = new MessageTitleBean("安徽师范大学经管学院", "11");
-        MessageTitleBean bean5 = new MessageTitleBean("安徽师范大学物电学院", "11");
-        MessageTitleBean bean6 = new MessageTitleBean("安徽师范大学空乘学院", "11");
+        MessageTitleBean bean1 = new MessageTitleBean("安徽师范大学", "11", "1");
+        MessageTitleBean bean2 = new MessageTitleBean("安徽师范大学学生会", "11", "1");
+        MessageTitleBean bean3 = new MessageTitleBean("安徽师范大学数计学院", "11", "1");
+        MessageTitleBean bean4 = new MessageTitleBean("安徽师范大学经管学院", "11", "1");
+        MessageTitleBean bean5 = new MessageTitleBean("安徽师范大学物电学院", "11", "1");
+        MessageTitleBean bean6 = new MessageTitleBean("安徽师范大学空乘学院", "11", "1");
         titles.add(bean1);
         titles.add(bean2);
         titles.add(bean3);
@@ -114,6 +117,10 @@ public class MessageFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onClick(View view) {
         //点击添加更多频道
-
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("select", (Serializable) titles);
+        Intent intent = new Intent(context, ChooseMessageActivity.class);
+        intent.putExtra("bundle", bundle);
+        startActivityForResult(intent, 1);
     }
 }
