@@ -42,6 +42,9 @@
     <string name="str_movement_detail">活动详情</string>
     <string name="str_release">发布</string>
     <string name="str_message">消息</string>
+    <string name="str_schoolmate_circle">校友圈</string>
+    <string name="str_lost_and_found">失物招领</string>
+    <string name="str_confession_wall">表白墙</string>
     <!--***************************************************我的*************************************************************-->
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>

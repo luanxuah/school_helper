@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.luanxu.activity.community.MovementActivity;
+import com.luanxu.activity.community.SchoolmateCircleActivity;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.custom.TitleBar;
 import com.luanxu.custom.percent.PercentFrameLayout;
@@ -74,6 +75,8 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
         switch (view.getId()){
             case R.id.pfl_schoolmate_circle:
                 //校友圈
+                intent = new Intent(context, SchoolmateCircleActivity.class);
+                startActivity(intent);
                 break;
             case R.id.pfl_help:
                 //失物招领

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white">
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_marginPercent="3%w">
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="15%w"
+                app:layout_widthPercent="15%w"
+                android:src="@mipmap/ic_heads_doc" />
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_marginLeftPercent="3%w"
+                android:orientation="vertical">
+                <com.luanxu.custom.percent.PercentLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/color_313131"
+                        android:textSize="@dimen/yms_font_30_px"
+                        android:gravity="center_vertical"
+                        android:text="小明" />
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/color_hint"
+                        android:textSize="@dimen/yms_font_24_px"
+                        android:gravity="center"
+                        android:text="3小时前"/>
+                </com.luanxu.custom.percent.PercentLinearLayout>
+                <TextView
+                    android:id="@+id/tv_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_313131"
+                    android:textSize="@dimen/yms_font_28_px"
+                    android:gravity="center_vertical"
+                    android:text="数学计算机科学学院" />
+            </com.luanxu.custom.percent.PercentLinearLayout>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_313131"
+            android:textSize="@dimen/yms_font_30_px"
+            app:layout_marginLeftPercent="3%w"
+            app:layout_marginRightPercent="3%w"
+            app:layout_marginBottomPercent="3%w"
+            android:text="今天天气好晴朗，处处好风光，好风光，蝴蝶儿忙，蜜蜂也忙，小鸟儿忙着，白云也忙，啊........ 马蹄践得落花香，马蹄践得落花香，眼前骆驼成群过，驼铃响叮当，响叮当，这也歌唱，那也歌唱，风儿唱也着，水也歌唱，啊........绿野茫茫天苍苍，绿野茫茫天苍苍，天苍苍"/>
+
+        <com.luanxu.custom.MyGridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|fill_vertical"
+            app:layout_marginLeftPercent="3%w"
+            app:layout_marginRightPercent="3%w"
+            app:layout_marginBottomPercent="3%w"
+            android:cacheColorHint="#00000000"
+            android:duplicateParentState="false"
+            android:focusable="false"
+            android:gravity="center_vertical|fill_vertical"
+            android:horizontalSpacing="@dimen/yms_dimens_10.0_px"
+            android:listSelector="#00000000"
+            android:scrollbars="none"
+            android:visibility="gone"
+            android:stretchMode="none"
+            android:verticalSpacing="@dimen/yms_dimens_10.0_px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_divider" />
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="10.5%w">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_collect"
+                    android:textSize="@dimen/yms_font_26_px"
+                    android:textColor="@color/color_9c9c9c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_collect1"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_divider"
+                android:layout_marginTop="@dimen/yms_dimens_20.0_px"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_flowers"
+                    android:textSize="@dimen/yms_font_26_px"
+                    android:textColor="@color/color_9c9c9c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/bg_send_flower"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_divider"
+                android:layout_marginTop="@dimen/yms_dimens_20.0_px"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_praise"
+                    android:textSize="@dimen/yms_font_26_px"
+                    android:textColor="@color/color_9c9c9c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_nice_gray"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_divider"
+                android:layout_marginTop="@dimen/yms_dimens_20.0_px"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <LinearLayout
+                android:id="@+id/ll_comment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:textSize="@dimen/yms_font_26_px"
+                    android:textColor="@color/color_9c9c9c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/btn_review_patuebt_edu"/>
+            </LinearLayout>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/color_divider" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="2.6%w"
+            android:background="@color/color_background" />
+
+    </com.luanxu.custom.percent.PercentLinearLayout>
+</LinearLayout>

@@ -39,6 +39,14 @@
                     android:background="@drawable/selector_shape_ffffff_0dp"
                     android:gravity="center_vertical" >
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        app:layout_marginRightPercent="3%w"
+                        android:contentDescription="@null"
+                        android:src="@mipmap/ic_work_right" />
+
                     <TextView
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/yms_font_32_px"
@@ -49,15 +57,8 @@
                         android:drawablePadding="@dimen/yms_dimens_24.0_px"
                         android:drawableStart="@mipmap/ic_launcher"
                         android:gravity="center_vertical"
-                        android:text="校友圈" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="end|center_vertical"
-                        app:layout_marginRightPercent="3%w"
-                        android:contentDescription="@null"
-                        android:src="@mipmap/ic_work_right" />
+                        android:text="@string/str_schoolmate_circle"
+                        android:id="@+id/textView" />
                 </com.luanxu.custom.percent.PercentFrameLayout>
 
                 <View
@@ -84,7 +85,7 @@
                         android:drawablePadding="@dimen/yms_dimens_24.0_px"
                         android:drawableStart="@mipmap/ic_launcher"
                         android:gravity="center_vertical"
-                        android:text="失物招领" />
+                        android:text="@string/str_lost_and_found" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -119,7 +120,7 @@
                         android:drawablePadding="@dimen/yms_dimens_24.0_px"
                         android:drawableStart="@mipmap/ic_launcher"
                         android:gravity="center_vertical"
-                        android:text="表白墙" />
+                        android:text="@string/str_confession_wall" />
 
                     <ImageView
                         android:layout_width="wrap_content"
@@ -154,7 +155,7 @@
                         android:drawablePadding="@dimen/yms_dimens_24.0_px"
                         android:drawableStart="@mipmap/ic_launcher"
                         android:gravity="center_vertical"
-                        android:text="校内活动" />
+                        android:text="@string/str_movement" />
 
                     <ImageView
                         android:layout_width="wrap_content"

@@ -3,6 +3,8 @@ package com.luanxu.activity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -46,6 +48,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private PercentLinearLayout pll_psd_close;
     //登录按钮
     private Button bt_login;
+
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            finish();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -132,7 +143,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
             case R.id.bt_login:
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
     }
