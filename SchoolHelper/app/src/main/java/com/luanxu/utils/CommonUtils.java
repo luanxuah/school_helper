@@ -3,7 +3,9 @@ package com.luanxu.utils;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -12,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.luanxu.bean.BottomMenuBean;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +23,7 @@ import java.util.List;
 public class CommonUtils {
 
 	private static Point deviceSize = null;
-
+	private static long lastClickTime = -1;
 	/**
 	 * 将2进制转化为16进制
 	 *
@@ -119,5 +122,47 @@ public class CommonUtils {
 			weekList.add(bean);
 		}
 		return weekList;
+	}
+
+	public static void scanFileAsync(Context ctx, String filePath) {
+		LogUtil.d("CommonUtil scanFileAsync,Intent.ACTION_MEDIA_SCANNER_SCAN_FILE发送广播:" + filePath);
+		Intent scanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+		scanIntent.setData(Uri.fromFile(new File(filePath)));
+		ctx.sendBroadcast(scanIntent);
+	}
+
+	public static boolean isFastDoubleClick() {
+		long time = System.currentTimeMillis();
+		long timeD = time - lastClickTime;
+		if (0 < timeD && timeD < 200) {
+			return true;
+		}
+		lastClickTime = time;
+		return false;
+	}
+
+	/**
+	 * 判断外置存储是否可用
+	 * @param context
+	 * @param showTip
+	 * @return
+	 */
+	public static boolean checkExternalStorage(Context context, boolean showTip) {
+		if (ExternalStorageUtil.isExternalStorageWritable()) {
+
+			if (ExternalStorageUtil.getSDcardAvailableSize() > 20) {
+				return true;
+			} else {
+				// 小于20M可用空间，提示用户清理
+				if (showTip) {
+					ToastUtil.show(context,"存储空间不足，请及时清理",0);
+				}
+			}
+		} else {
+			if (showTip) {
+				ToastUtil.show(context,"SD卡暂不可用，请检查SD卡",0);
+			}
+		}
+		return false;
 	}
 }

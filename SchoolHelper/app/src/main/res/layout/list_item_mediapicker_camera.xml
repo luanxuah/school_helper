@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/thumbnail_camera"
+        android:background="#353535"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="@dimen/yms_dimens_200.0_px"
+        android:layout_height="@dimen/yms_dimens_200.0_px"
+        app:layout_widthPercent="100%w"
+        app:layout_heightPercent="100%w">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_photo_picker_camera"/>
+        <TextView
+            android:id="@+id/tv_media_piker_type"
+            android:layout_marginTop="@dimen/yms_dimens_10.0_px"
+            android:textSize="14sp"
+            android:textColor="#CDCECE"
+            android:text="拍摄照片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</com.luanxu.custom.percent.PercentRelativeLayout>

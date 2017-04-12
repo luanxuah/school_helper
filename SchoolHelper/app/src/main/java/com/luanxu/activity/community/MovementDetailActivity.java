@@ -35,6 +35,7 @@ public class MovementDetailActivity extends BaseActivity{
 
         TitleBar bar = getTitleBar();
         bar.setTitle(getResources().getString(R.string.str_movement_detail), R.color.color_white);
+        bar.setBack();
         bar.enableRightBtn(null, R.mipmap.img_title_more, new View.OnClickListener() {
             @Override
             public void onClick(View view) {

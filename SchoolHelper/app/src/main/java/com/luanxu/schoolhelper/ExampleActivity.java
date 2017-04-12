@@ -236,7 +236,7 @@ public class ExampleActivity extends Activity {
             @Override
             public void onResponse(File file, int id) {
                 if (file != null) {
-                    LoaderImageUtil.displayFromSDCard(file.getAbsolutePath(),iv_img);
+                    LoaderImageUtil.displayFromSDCard(file.getAbsolutePath(), R.mipmap.empty_photo,iv_img);
                 }
             }
 

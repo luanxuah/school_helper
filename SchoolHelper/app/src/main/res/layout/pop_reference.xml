@@ -22,7 +22,7 @@
         app:layout_marginRightPercent="2%w"
         app:layout_marginTopPercent="2%w"
         app:layout_widthPercent="25%w"
-        android:background="@drawable/selector_shape_white_9dp"
+        android:background="@drawable/bg_pop_docc"
         android:orientation="vertical" >
 
         <com.luanxu.custom.percent.PercentLinearLayout
@@ -35,7 +35,7 @@
             android:gravity="center"
             android:orientation="horizontal" >
             <TextView
-                android:textColor="@color/color_blue"
+                android:textColor="@color/color_white"
                 android:textSize="@dimen/yms_font_28_px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_height="0.5dp"
             app:layout_marginLeftPercent="11%w"
             app:layout_marginRightPercent="11%w"
-            android:background="@color/color_blue" />
+            android:background="@color/color_white" />
 
         <com.luanxu.custom.percent.PercentLinearLayout
             android:id="@+id/ll_update"
@@ -62,7 +62,7 @@
             android:orientation="horizontal" >
 
             <TextView
-                android:textColor="@color/color_blue"
+                android:textColor="@color/color_white"
                 android:textSize="@dimen/yms_font_28_px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

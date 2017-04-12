@@ -30,6 +30,10 @@ public class BaseActivity extends FragmentActivity{
 		return titleBar;
 	}
 
+	public void onSaveInstance(Bundle outState) {
+		super.onSaveInstanceState(outState);
+	}
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();

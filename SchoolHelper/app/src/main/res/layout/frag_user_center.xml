@@ -85,9 +85,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_heightPercent="8%w"
-                    app:layout_widthPercent="8%w"
-                    android:src="@mipmap/ic_launcher" />
+                    app:layout_heightPercent="6%w"
+                    app:layout_widthPercent="6%w"
+                    android:src="@mipmap/ic_credit" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -118,9 +118,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_heightPercent="8%w"
-                    app:layout_widthPercent="8%w"
-                    android:src="@mipmap/ic_launcher" />
+                    app:layout_heightPercent="6%w"
+                    app:layout_widthPercent="6%w"
+                    android:src="@mipmap/ic_score" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -151,9 +151,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_heightPercent="8%w"
-                    app:layout_widthPercent="8%w"
-                    android:src="@mipmap/ic_launcher" />
+                    app:layout_heightPercent="6%w"
+                    app:layout_widthPercent="6%w"
+                    android:src="@mipmap/ic_empty_classroom" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -184,9 +184,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_heightPercent="8%w"
-                    app:layout_widthPercent="8%w"
-                    android:src="@mipmap/ic_launcher" />
+                    app:layout_heightPercent="6%w"
+                    app:layout_widthPercent="6%w"
+                    android:src="@mipmap/ic_collect" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -216,9 +216,9 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_heightPercent="8%w"
-                    app:layout_widthPercent="8%w"
-                    android:src="@mipmap/ic_launcher" />
+                    app:layout_heightPercent="6%w"
+                    app:layout_widthPercent="6%w"
+                    android:src="@mipmap/ic_setting" />
 
                 <TextView
                     android:layout_width="0dp"

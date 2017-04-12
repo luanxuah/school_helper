@@ -31,7 +31,7 @@ public class LoadingStyleOneDialog extends AlertDialog {
 	 * @param ctx 上下文
 	 * @param layoutResId 等待框的布局
 	 * @param alertMsg 显示字符串
-     */
+	 */
 	public LoadingStyleOneDialog(Context ctx, int layoutResId, String alertMsg) {
 		super(ctx);
 		this.context = ctx;
@@ -61,5 +61,5 @@ public class LoadingStyleOneDialog extends AlertDialog {
 		setCancelable(true);
 		setCanceledOnTouchOutside(false);
 	}
-
 }
+

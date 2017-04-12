@@ -24,7 +24,7 @@ public class SchoolmateCircleAdapter extends BaseAdapter{
     private Activity context;
 
     private ViewHolder holder;
-    private int images[] = {R.mipmap.test, R.mipmap.test, R.mipmap.test,R.mipmap.test, R.mipmap.test, R.mipmap.test,R.mipmap.test, R.mipmap.test, R.mipmap.test};
+    private int images[] = {R.mipmap.test, R.mipmap.test, R.mipmap.test};
 
     public SchoolmateCircleAdapter(Activity context){
         this.context = context;

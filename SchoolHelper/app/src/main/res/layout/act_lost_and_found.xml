@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_gradient_title"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.luanxu.custom.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="horizontal"
+            app:layout_heightPercent="15%w"
+            app:layout_widthPercent="20%w">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical|left"
+                android:drawableLeft="@mipmap/ic_back"
+                android:drawableStart="@mipmap/ic_back"
+                app:layout_heightPercent="50%h"
+                app:layout_marginLeftPercent="25%h"
+                app:layout_marginRightPercent="25%h"
+                app:layout_widthPercent="50%h" />
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="0.5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="left"
+                android:src="@drawable/selector_title_onclick_square"
+                app:layout_heightPercent="100%h"
+                app:layout_widthPercent="100%h" />
+        </com.luanxu.custom.percent.PercentFrameLayout>
+
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:id="@+id/pll_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_heightPercent="8%w"
+            app:layout_widthPercent="60%w">
+
+            <TextView
+                android:id="@+id/tv_lost"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_shape_project_bottom_white_8px"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="communication"
+                android:text="失物"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/yms_dimens_30.0_px"
+                app:layout_widthPercent="44%w" />
+
+            <TextView
+                android:id="@+id/tv_found"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_shape_null_0px"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="relation"
+                android:text="招领"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/yms_dimens_30.0_px"
+                app:layout_widthPercent="44%w" />
+        </com.luanxu.custom.percent.PercentLinearLayout>
+
+        <com.luanxu.custom.percent.PercentFrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="horizontal"
+            app:layout_heightPercent="15%w"
+            app:layout_widthPercent="20%w">
+
+            <TextView
+                android:id="@+id/title_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center_vertical|right"
+                app:layout_marginLeftPercent="25%h"
+                app:layout_marginRightPercent="25%h"
+                android:textSize="@dimen/yms_font_30_px"
+                android:textColor="@color/color_white"
+                android:text="发布"/>
+
+            <ImageView
+                android:id="@+id/iv_send"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="left"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="right"
+                android:src="@drawable/selector_title_onclick_square"
+                app:layout_heightPercent="100%h"
+                app:layout_marginLeftPercent="30%h"
+                app:layout_widthPercent="105%h" />
+        </com.luanxu.custom.percent.PercentFrameLayout>
+
+    </com.luanxu.custom.percent.PercentLinearLayout>
+
+    <com.luanxu.custom.NoScrollViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

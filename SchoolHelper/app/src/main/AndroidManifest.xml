@@ -51,6 +51,22 @@
             android:name="com.luanxu.schoolhelper.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
+        <!-- 相册页面 -->
+        <activity
+            android:name="com.luanxu.custom.album.MediaPickerActivity"
+            android:icon="@mipmap/ic_back"
+            android:label="图库"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediaPickerTheme" />
+        <!-- 录像页面 -->
+        <activity
+            android:name="com.luanxu.custom.album.RecordingVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+        <!-- 图片预览页面 -->
+        <activity
+            android:name="com.luanxu.activity.ActPreViewIcon"
+            android:screenOrientation="portrait"/>
 
         <!--**********************************************************课表模块**********************************************************************************************-->
         <!-- 修改课表页面 -->
@@ -88,6 +104,24 @@
         <!-- 校友圈页面 -->
         <activity
             android:name="com.luanxu.activity.community.SchoolmateCircleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 校友圈的发送页面 -->
+        <activity
+            android:name="com.luanxu.activity.community.SchoolmateCircleSendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 表白墙页面 -->
+        <activity
+            android:name="com.luanxu.activity.community.ConfessionWallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 失物招领页面 -->
+        <activity
+            android:name="com.luanxu.activity.community.LostAndFoundActivity"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 

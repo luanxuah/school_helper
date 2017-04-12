@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -49,6 +48,7 @@ public class MovementActivity extends BaseActivity{
 
         TitleBar bar = getTitleBar();
         bar.setTitle(getResources().getString(R.string.str_movement), R.color.color_white);
+        bar.setBack();
         bar.enableRightBtn(null, R.mipmap.img_title_more, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,9 +87,7 @@ public class MovementActivity extends BaseActivity{
         final View popRoot = LayoutInflater.from(context).inflate(R.layout.pop_movement_detail, null);
         // 创建PopupWindow实例, 分别是宽度和高度
         morePop = new PopupWindow(popRoot, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
-        int[] location = new int[2];
-        v.getLocationOnScreen(location);// v是title的右部，撑满整个title的高度，是一样高的
-        morePop.showAtLocation(findViewById(R.id.title), Gravity.NO_GRAVITY, location[0], location[1] + findViewById(R.id.title).getHeight()-20);
+        morePop.showAsDropDown(findViewById(R.id.title));
         // 点击其他地方消失
         popRoot.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")

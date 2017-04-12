@@ -1,7 +1,9 @@
 package com.luanxu.activity.community;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.luanxu.adapter.community.SchoolmateCircleAdapter;
 import com.luanxu.application.SchoolHelperApplication;
@@ -9,6 +11,7 @@ import com.luanxu.base.BaseActivity;
 import com.luanxu.custom.PullToRefreshListView;
 import com.luanxu.custom.TitleBar;
 import com.luanxu.schoolhelper.R;
+import com.luanxu.utils.ResourceUtil;
 
 /**
  * @author: LuanXu
@@ -32,7 +35,14 @@ public class SchoolmateCircleActivity extends BaseActivity{
         context = this;
         TitleBar bar = getTitleBar();
         bar.setTitle(getResources().getString(R.string.str_schoolmate_circle), R.color.color_white);
-
+        bar.setBack();
+        bar.enableRightBtn(ResourceUtil.getString(context, R.string.str_release), -1, new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SchoolmateCircleSendActivity.class);
+                startActivity(intent);
+            }
+        });
         init();
     }
 

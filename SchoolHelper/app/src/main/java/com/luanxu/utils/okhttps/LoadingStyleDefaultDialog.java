@@ -21,19 +21,19 @@ import com.luanxu.schoolhelper.R;
  * @changed by:
  */
 public class LoadingStyleDefaultDialog extends Dialog {
-
-
+    Dialog dialog;
     private View aniView;
     private ImageView btn;
     private RotateAnimation mRotateAnimation;
     private TextView tvShowContent;
 
-    public LoadingStyleDefaultDialog(Context ctx, String customMsg) {
-        this(ctx, R.style.transparentFrameWindowStyle,customMsg);
+    public LoadingStyleDefaultDialog(Context ctx,String customMsg) {
+        this(ctx,R.style.transparentFrameWindowStyle,customMsg);
     }
 
-    private LoadingStyleDefaultDialog(Context ctx, int theme, String customMsg) {
-        super(ctx, theme);
+    private LoadingStyleDefaultDialog(Context ctx, int theme,String customMsg) {
+        super(ctx);
+        dialog = new Dialog(ctx, R.style.CustomProgressDialog);
         aniView = LayoutInflater.from(ctx).inflate(R.layout.wait_dialog_layout, null);
         btn = (ImageView) aniView.findViewById(R.id.btn_animation);
         tvShowContent = (TextView) aniView.findViewById(R.id.tv_animation);
@@ -46,11 +46,13 @@ public class LoadingStyleDefaultDialog extends Dialog {
         // 允许点返回键取消
         setCancelable(true);
         // 触碰其他地方不消失
-        setCanceledOnTouchOutside(false);
+        dialog.setCanceledOnTouchOutside(false);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        addContentView(aniView, params);
-        show();
-        btn.startAnimation(mRotateAnimation);
+        dialog.addContentView(aniView, params);
+        if (null != dialog){
+            dialog.show();
+            btn.startAnimation(mRotateAnimation);
+        }
     }
 
     @Override
@@ -58,6 +60,14 @@ public class LoadingStyleDefaultDialog extends Dialog {
         if (btn != null) {
             btn.clearAnimation();
         }
-        super.dismiss();
+        if (null != dialog) {
+            try {
+                dialog.dismiss();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                dialog = null;
+            }
+        }
     }
 }

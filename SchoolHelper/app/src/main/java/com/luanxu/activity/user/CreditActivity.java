@@ -38,7 +38,7 @@ public class CreditActivity extends BaseActivity{
 
         TitleBar bar = getTitleBar();
         bar.setTitle(getResources().getString(R.string.str_credit), R.color.color_white);
-
+        bar.setBack();
         init();
     }
 

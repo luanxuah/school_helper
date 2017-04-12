@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luanxu.custom.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <com.luanxu.custom.album.PickerImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/yms_dimens_200.0_px"
+        android:layout_height="@dimen/yms_dimens_200.0_px"
+        app:layout_widthPercent="100%w"
+        app:layout_heightPercent="100%w"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/overlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_video_grid" />
+    <View
+        android:visibility="gone"
+        android:id="@+id/view_media_adapter_mask"
+        android:background="#88000000"
+        android:layout_width="@dimen/yms_dimens_200.0_px"
+        android:layout_height="@dimen/yms_dimens_200.0_px"
+        app:layout_widthPercent="100%w"
+        app:layout_heightPercent="100%w"/>
+
+    <LinearLayout
+        android:id="@+id/layout_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/thumbnail"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:layout_gravity="right">
+        <CheckBox
+            android:layout_marginTop="@dimen/yms_dimens_10.0_px"
+            android:layout_marginRight="@dimen/yms_dimens_10.0_px"
+            android:id="@+id/checkbox"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_checkbox_style12"
+            android:button="@null"
+            android:checked="false"
+            android:clickable="false"
+            />
+    </LinearLayout>
+</com.luanxu.custom.percent.PercentRelativeLayout>

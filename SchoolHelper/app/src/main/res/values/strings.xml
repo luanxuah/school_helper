@@ -6,7 +6,21 @@
     <string name="str_out_of_application">是否退出应用?</string>
     <string name="str_ok">确定</string>
     <string name="str_cancle">取消</string>
-
+    <string name="str_open_store_power">开启存储权限</string>
+    <string name="str_open_store_power_primpt">打开相册失败，请尝试按以下路径开启存储权限：\n方法一，安全中心→授权管理→应用权限管理→应用管理→医学圈→存储→允许\n方法二，360卫士→软件管理→权限管理→医学圈→存储→允许</string>
+    <string name="picker_no_items">No items.</string>
+    <plurals name="picker_video_duration_warning">
+        <item quantity="one">Video\'s duration limit is  %d second.</item>
+        <item quantity="other">Video\'s duration limit is  %d seconds.</item>
+    </plurals>
+    <plurals name="picker_video_duration_max">
+        <item quantity="one">这个视频的时间大于 %d 秒。</item>
+        <item quantity="other">这个视频的时间大于 %d 秒。</item>
+    </plurals>
+    <plurals name="picker_video_duration_min">
+        <item quantity="one">This video\'s duration smaller than %d second.</item>
+        <item quantity="other">This video\'s duration smaller than %d seconds.</item>
+    </plurals>
 
     <!-- 登录页面 -->
     <string name="str_login">登录</string>
@@ -45,6 +59,8 @@
     <string name="str_schoolmate_circle">校友圈</string>
     <string name="str_lost_and_found">失物招领</string>
     <string name="str_confession_wall">表白墙</string>
+    <string name="str_send_schoolmate_circle">发布校友圈</string>
+    <string name="str_not_add_same_pic">不能添加相同的图片</string>
     <!--***************************************************我的*************************************************************-->
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>
@@ -64,7 +80,11 @@
     <string name="str_birth_date">出生日期</string>
     <string name="str_politics_status">政治面貌</string>
     <string name="str_phone_num">手机号码</string>
+    <string name="str_update_phone">修改手机号码</string>
+    <string name="str_write_phone">填写手机号码</string>
     <string name="str_email">电子邮箱</string>
+    <string name="str_write_email">填写邮箱</string>
+    <string name="str_update_email">修改邮箱</string>
 
     <!-- 学分页面 -->
     <string name="str_credit">学分</string>

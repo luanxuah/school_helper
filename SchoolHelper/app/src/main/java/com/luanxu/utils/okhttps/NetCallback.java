@@ -15,24 +15,34 @@ import com.luanxu.utils.ToastUtil;
  * @description: 网络回调接口
  * @changed by:
  */
-public abstract class NetCallback<T extends Bean> {
+public abstract class NetCallback <T extends Bean> {
 
-    public void onSuccess(Context ctx, T t, Dialog dialog) {
+    public void onSuccess(Context ctx,T t, Dialog dialog) {
         if (dialog != null) {
             dialog.dismiss();
         }
     }
 
 
-    public void onNoData(Context ctx, Dialog dialog){
+    public void onNoData(Context ctx,Dialog dialog){
         if (dialog != null) {
             dialog.dismiss();
         }
     }
 
-    public void onError(Context ctx, Dialog dialog) {
+    public void onNoData(Context ctx,String msg,Dialog dialog) {
         if (dialog != null) {
             dialog.dismiss();
+        }
+    }
+
+    public void onError(Context ctx,Dialog dialog) {
+        if (dialog != null) {
+            try {
+                dialog.dismiss();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         if(ctx != null) {

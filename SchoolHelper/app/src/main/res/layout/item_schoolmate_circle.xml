@@ -21,10 +21,11 @@
                 android:layout_height="wrap_content"
                 app:layout_heightPercent="15%w"
                 app:layout_widthPercent="15%w"
-                android:src="@mipmap/ic_heads_doc" />
+                android:src="@mipmap/ic_head2" />
             <com.luanxu.custom.percent.PercentLinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 app:layout_marginLeftPercent="3%w"
                 android:orientation="vertical">
                 <com.luanxu.custom.percent.PercentLinearLayout
@@ -60,6 +61,15 @@
                     android:gravity="center_vertical"
                     android:text="数学计算机科学学院" />
             </com.luanxu.custom.percent.PercentLinearLayout>
+            <ImageView
+                android:id="@+id/iv_medal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_heightPercent="10%w"
+                app:layout_widthPercent="10%w"
+                android:src="@mipmap/ic_gold_medal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"/>
         </com.luanxu.custom.percent.PercentLinearLayout>
 
         <TextView

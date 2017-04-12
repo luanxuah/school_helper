@@ -11,6 +11,8 @@ import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * Created by 栾煦 on 2016/11/29.
@@ -20,6 +22,11 @@ public class SchoolHelperApplication extends Application{
     private List<Activity> mActCollections;
     /** 应用实例 **/
     private static SchoolHelperApplication instance;
+    //线程池 定长 支持定时及周期性任务  减轻application的初始化，只在使用时获初始化线程池
+    private ScheduledExecutorService scheduledThreadPool;
+    //最大线程数
+    private final static int MAX_SIZE = 3;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -69,5 +76,15 @@ public class SchoolHelperApplication extends Application{
      */
     public void addActivity(Activity activity) {
         mActCollections.add(activity);
+    }
+
+    /**
+     * 减轻application的初始化，只在使用时获初始化线程池
+     */
+    public ScheduledExecutorService getThreadPool(){
+        if (null == scheduledThreadPool){
+            scheduledThreadPool = Executors.newScheduledThreadPool(MAX_SIZE);
+        }
+        return scheduledThreadPool;
     }
 }

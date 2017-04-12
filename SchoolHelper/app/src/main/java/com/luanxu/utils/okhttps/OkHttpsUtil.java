@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.text.TextUtils;
 
-import com.luanxu.bean.AccessTokenBean;
 import com.luanxu.bean.Bean;
 import com.luanxu.bean.PageBean;
 import com.luanxu.custom.PullToRefreshListView;
@@ -13,8 +12,6 @@ import com.luanxu.utils.GsonUtil;
 import com.luanxu.utils.LogUtil;
 import com.luanxu.utils.NetWorkUtil;
 import com.luanxu.utils.SharedPreferencesUtil;
-import com.luanxu.utils.ToastUtil;
-import com.luanxu.utils.UrlConstant;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.builder.PostFormBuilder;
 import com.zhy.http.okhttp.callback.Callback;
@@ -92,7 +89,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public static <T extends Bean> void postWithToken(Context ctx, String url, Class<T> cls, boolean flag, NetCallback<T> netCallback) {
+    public static <T extends Bean> void postWithToken(Context ctx,String url,Class<T> cls,boolean flag,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,false,null,null,null,cls,netCallback);
     }
 
@@ -108,7 +105,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public static <T extends Bean> void postWithToken(Context ctx, String url, Map<String,String> params, Class<T> cls, boolean flag, NetCallback<T> netCallback) {
+    public static <T extends Bean> void postWithToken(Context ctx,String url,Map<String,String> params,Class<T> cls,boolean flag,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,false,null,null,params,cls,netCallback);
     }
 
@@ -123,7 +120,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, Dialog outsideDialog, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,Dialog outsideDialog,Class<T> cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,false,null,outsideDialog,null,cls,netCallback);
     }
 
@@ -139,7 +136,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, Dialog outsideDialog, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,Dialog outsideDialog,Map<String,String> params,Class<T> cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,false,null,outsideDialog,params,cls,netCallback);
     }
 
@@ -154,7 +151,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,Class<T> cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,true,null,null,null,cls,netCallback);
     }
 
@@ -170,7 +167,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,Map<String,String> params,Class<T>cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,true,null,null,params,cls,netCallback);
     }
 
@@ -185,7 +182,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, String loadingMsg, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,String loadingMsg,Class<T> cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,true,loadingMsg,null,null,cls,netCallback);
     }
 
@@ -203,7 +200,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>
      */
-    public  static <T extends Bean> void postWithToken(Context ctx, String url, String loadingMsg, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithToken(Context ctx,String url,String loadingMsg,Map<String,String> params,Class<T> cls,NetCallback<T> netCallback) {
         postWithToken(true,null,ctx,url,true,loadingMsg,null,params,cls,netCallback);
     }
     /**
@@ -221,7 +218,7 @@ public class OkHttpsUtil {
      * @param netCallback               网络回调
      * @param <T>                       泛型
      */
-    public static <T extends PageBean> void postWithToken(boolean isRefresh, PullToRefreshListView pullToRefreshListView, Context ctx, String url, boolean isShowDialog, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public static <T extends PageBean> void postWithToken(boolean isRefresh,PullToRefreshListView pullToRefreshListView,Context ctx,String url,boolean isShowDialog,Map<String,String> params,Class<T>cls,NetCallback<T> netCallback) {
         postWithRefreshAndLoad(isRefresh,pullToRefreshListView,ctx,url,isShowDialog,null,null,params,cls,netCallback);
     }
 
@@ -238,7 +235,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, Dialog outsideDialog, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,Dialog outsideDialog,Class<T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,false,null,outsideDialog,null,cls,netCallback);
     }
 
@@ -254,7 +251,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, Dialog outsideDialog, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,Dialog outsideDialog,Map<String,String> params,Class<T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,false,null,outsideDialog,params,cls,netCallback);
     }
 
@@ -269,7 +266,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,Class <T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,true,null,null,null,cls,netCallback);
     }
 
@@ -285,7 +282,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,Map<String,String> params,Class<T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,true,null,null,params,cls,netCallback);
     }
 
@@ -300,7 +297,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>               泛型
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, String loadingMsg, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,String loadingMsg,Class<T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,true,loadingMsg,null,null,cls,netCallback);
     }
 
@@ -316,7 +313,7 @@ public class OkHttpsUtil {
      * @param netCallback       网络请求回调
      * @param <T>
      */
-    public  static <T extends Bean> void postWithoutToken(Context ctx, String url, String loadingMsg, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    public  static <T extends Bean> void postWithoutToken(Context ctx,String url,String loadingMsg,Map<String,String> params,Class<T> cls,NetCallback<T> netCallback) {
         postWithoutToken(ctx,url,true,loadingMsg,null,params,cls,netCallback);
     }
 
@@ -336,7 +333,7 @@ public class OkHttpsUtil {
      * @param netCallback         网络请求回调
      * @param <T>                 泛型
      */
-    private  static <T extends Bean> void postWithRefreshAndLoad(boolean isRefresh, PullToRefreshListView pullToRefreshListView, Context ctx, String url, boolean needCustomDialog, String loadingMsg, Dialog outsideDialog, Map<String,String> params, Class<T> cls, NetCallback<T> netCallback) {
+    private  static <T extends Bean> void postWithRefreshAndLoad(boolean isRefresh, PullToRefreshListView pullToRefreshListView,Context ctx, String url,boolean needCustomDialog,String loadingMsg,Dialog outsideDialog,Map<String,String> params, Class<T>cls, NetCallback<T> netCallback) {
         if (pullToRefreshListView != null) {
 
             if (isRefresh) {
@@ -351,7 +348,7 @@ public class OkHttpsUtil {
                 params = new HashMap<String,String>();
             }
 
-            params.put("page", String.valueOf(CURRENT_PAGE));
+            params.put("page",String.valueOf(CURRENT_PAGE));
 
             postWithToken(isRefresh,pullToRefreshListView,ctx,url,needCustomDialog,loadingMsg,outsideDialog,params,cls,netCallback);
 
@@ -372,7 +369,7 @@ public class OkHttpsUtil {
      * @param netCallback         网络请求回调
      * @param <T>                 泛型
      */
-    private static <T extends Bean> void postWithToken(final boolean isRefresh , PullToRefreshListView pullToRefreshListView, Context ctx, String url, boolean needCustomDialog, String loadingMsg, Dialog outsideDialog, Map<String,String> params, Class<T> cls, final NetCallback<T> netCallback) {
+    private static <T extends Bean> void postWithToken(final boolean isRefresh ,PullToRefreshListView pullToRefreshListView,Context ctx,String url,boolean needCustomDialog,String loadingMsg,Dialog outsideDialog,Map<String,String> params,Class<T> cls,final NetCallback<T> netCallback) {
 
         if (ctx != null && !TextUtils.isEmpty(url) && cls != null) {
 
@@ -416,7 +413,7 @@ public class OkHttpsUtil {
      * @param netCallback   网络请求回调
      * @param <T>           泛型
      */
-    private static <T extends Bean> void postWithoutToken(Context ctx, String url, boolean needDialog, String loadingMsg, Dialog outsideDialog, Map<String,String> params, Class<T> cls, final NetCallback<T> netCallback) {
+    private static <T extends Bean> void postWithoutToken(Context ctx,String url,boolean needDialog,String loadingMsg,Dialog outsideDialog,Map<String,String> params,Class<T> cls,final NetCallback<T> netCallback) {
 
         if (ctx != null && !TextUtils.isEmpty(url) && cls != null) {
 
@@ -456,7 +453,7 @@ public class OkHttpsUtil {
      * @param netCallback           网络请求回调类，需要子类具体实现
      * @param <T>                   泛型
      */
-    private static <T extends Bean> void post(final boolean isRefresh, final PullToRefreshListView pullToRefreshListView, final Context ctx, final String url, final Dialog dialog, final Map<String,String> params, final boolean needToken, final Class<T> cls, final NetCallback<T> netCallback) {
+    private static <T extends Bean> void post(final boolean isRefresh, final PullToRefreshListView pullToRefreshListView, final Context ctx, final String url, final Dialog dialog, final Map<String,String> params, final boolean needToken, final Class<T>cls, final NetCallback<T> netCallback) {
         // 判断当前是否有网络
         if(NetWorkUtil.isNetworkConnected(ctx)) {
 
@@ -483,7 +480,7 @@ public class OkHttpsUtil {
                     @Override
                     public T parseNetworkResponse(Response response, int id) throws Exception {
                         String body = response.body().string();
-                        LogUtil.d("OkHttpUtil ===== response -->",body);
+                        LogUtil.e("OkHttpUtil ===== response -->",body);
                         // 解析实体Bean的引用
                         T t = null;
 
@@ -514,7 +511,7 @@ public class OkHttpsUtil {
                                     t = GsonUtil.json2Object(body,cls);
 
                                 } else if (OkHttpsUtil.REQUEST_NO_DATA.equals(CURRENT_STATUS)) {
-
+                                    t = GsonUtil.json2Object(body,cls);
                                 } else if (OkHttpsUtil.REQUEST_TOKEN_INVALID.equals(CURRENT_STATUS)){
                                     if (needToken) {
                                         // Token失效
@@ -523,6 +520,7 @@ public class OkHttpsUtil {
                                 }
                             }catch(Exception e) {
                                 CURRENT_STATUS = "";
+                                e.printStackTrace();
                             }
                         }
                         return t;
@@ -555,6 +553,11 @@ public class OkHttpsUtil {
                             }else if(OkHttpsUtil.REQUEST_NO_DATA.equals(CURRENT_STATUS)) {
                                 // 请求无数据
                                 netCallback.onNoData(ctx,dialog);
+
+                                String msgHint = !TextUtils.isEmpty(t.getMsg()) ? t.getMsg() : (!TextUtils.isEmpty(t.getErrorMessage()) ? t.getErrorMessage() : "");
+                                if (!TextUtils.isEmpty(msgHint)) {
+                                    netCallback.onNoData(ctx,msgHint,dialog);
+                                }
                             }else {
                                 return;
                             }
@@ -602,53 +605,53 @@ public class OkHttpsUtil {
      */
     private static <T extends Bean> void getTokenAndResume(final boolean isRefresh, final PullToRefreshListView pullToRefreshListView, final Context ctx, final String url, final Dialog dialog, final Map<String,String> params, final boolean needToken, final Class<T> cls, final NetCallback<T> netCallback){
         // 本地缓存有tokenCode
-        String username="";
-        String password = "";
-        if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-
-            Map<String,String> tokenParams = new HashMap<String, String>();
-            tokenParams.put("username",username);
-            tokenParams.put("password",password);
-
-            OkHttpUtils.post().url(UrlConstant.GET_APP_TOKEN).params(tokenParams).addParams("json","Y").build().execute(new Callback<AccessTokenBean>() {
-                @Override
-                public AccessTokenBean parseNetworkResponse(Response response, int id) throws Exception {
-                    String body = response.body().string();
-                    // 带解析的对象引用
-                    AccessTokenBean atBean = null;
-                    // 解析实体Bean
-                    if (!TextUtils.isEmpty(body)) {
-                        atBean = GsonUtil.json2Object(body,AccessTokenBean.class);
-                    }
-                    return atBean;
-                }
-
-                @Override
-                public void onError(Call call, Exception e, int id) {
-                    if(dialog != null) {
-                        dialog.dismiss();
-                    }
-                }
-
-                @Override
-                public void onResponse(AccessTokenBean atBean, int id) {
-                    if(atBean != null) {
-                        if(OkHttpsUtil.REQUEST_SUCCESS.equals(atBean.getStatus())) {
-                            // 缓存token到本地
-                            if (!TextUtils.isEmpty(atBean.getAccessToken())) {
-                                SharedPreferencesUtil.set(ctx,CommonConstant.TOKEN_FILE_NAME,CommonConstant.TOKEN_CODE_KEY,atBean.getAccessToken());
-                                // 接着上次的回调请求服务器
-                                post(isRefresh,pullToRefreshListView,ctx,url,dialog,params,needToken,cls,netCallback);
-                            }
-
-                        }
-                    }
-                }
-            });
-
-        }else {
-            ToastUtil.show(ctx,"这个家伙没有ID或者密码，获取不到Token",0);
-        }
+//        PartyBean partyBean = LoginPreference.getUserInfo();
+//
+//        if (!TextUtils.isEmpty(partyBean.userLoginId) && !TextUtils.isEmpty(partyBean.password)) {
+//
+//            Map<String,String> tokenParams = new HashMap<String, String>();
+//            tokenParams.put("username",partyBean.userLoginId);
+//            tokenParams.put("password",partyBean.password);
+//
+//            OkHttpUtils.post().url(UrlConstant.GET_APP_TOKEN).params(tokenParams).addParams("json","Y").build().execute(new Callback<AccessTokenBean>() {
+//                @Override
+//                public AccessTokenBean parseNetworkResponse(Response response, int id) throws Exception {
+//                    String body = response.body().string();
+//                    // 带解析的对象引用
+//                    AccessTokenBean atBean = null;
+//                    // 解析实体Bean
+//                    if (!TextUtils.isEmpty(body)) {
+//                        atBean = GsonUtil.json2Object(body,AccessTokenBean.class);
+//                    }
+//                    return atBean;
+//                }
+//
+//                @Override
+//                public void onError(Call call, Exception e, int id) {
+//                    if(dialog != null) {
+//                        dialog.dismiss();
+//                    }
+//                }
+//
+//                @Override
+//                public void onResponse(AccessTokenBean atBean, int id) {
+//                    if(atBean != null) {
+//                        if(OkHttpsUtil.REQUEST_SUCCESS.equals(atBean.getStatus())) {
+//                            // 缓存token到本地
+//                            if (!TextUtils.isEmpty(atBean.getAccessToken())) {
+//                                SharedPreferencesUtil.set(ctx,CommonConstant.TOKEN_FILE_NAME,CommonConstant.TOKEN_CODE_KEY,atBean.getAccessToken());
+//                                // 接着上次的回调请求服务器
+//                                post(isRefresh,pullToRefreshListView,ctx,url,dialog,params,needToken,cls,netCallback);
+//                            }
+//
+//                        }
+//                    }
+//                }
+//            });
+//
+//        }else {
+//            ToastUtil.show(ctx,"这个家伙没有ID或者密码，获取不到Token",0);
+//        }
     }
 
     /**

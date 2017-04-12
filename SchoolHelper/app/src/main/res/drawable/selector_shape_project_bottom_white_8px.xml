@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 左圆角，白背景 -->
+    <item android:state_selected="true"><shape>
+            <corners android:bottomLeftRadius="8px" android:bottomRightRadius="0dp" android:topLeftRadius="8px" android:topRightRadius="0px" />
+
+            <stroke android:width="2px" android:color="@color/color_white" />
+
+            <solid android:color="@color/color_white"></solid>
+        </shape></item>
+    
+    <item><shape>
+            <corners android:bottomLeftRadius="8px" android:bottomRightRadius="0dp" android:topLeftRadius="8px" android:topRightRadius="0px" />
+
+            <stroke android:width="2px" android:color="@color/color_white" />
+
+            <solid android:color="@null"></solid>
+        </shape></item>
+
+</selector>

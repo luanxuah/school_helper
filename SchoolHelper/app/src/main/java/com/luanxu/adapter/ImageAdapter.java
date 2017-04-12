@@ -78,7 +78,7 @@ public class ImageAdapter extends BaseAdapter {
                 holder.tvChannel = (ImageView) view.findViewById(R.id.round_img);
             }else{
                 view = LayoutInflater.from(context).inflate(R.layout.item_normal_image, parent, false);
-                holder.tvChannel = (ImageView) view.findViewById(R.id.magazine);
+                holder.tvChannel = (ImageView) view.findViewById(R.id.iv);
             }
             view.setTag(holder);
         } else {

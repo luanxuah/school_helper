@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/info"
+        android:textSize="@dimen/yms_font_28_px"
+        android:textColor="@color/color_313131"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/yms_dimens_30.0_px"
+        android:layout_marginRight="@dimen/yms_dimens_30.0_px"
+        android:background="@drawable/selector_shape_ffffff_8px"
+        android:paddingBottom="@dimen/yms_dimens_16.0_px"
+        android:paddingLeft="@dimen/yms_dimens_20.0_px"
+        android:paddingRight="@dimen/yms_dimens_20.0_px"
+        android:paddingTop="@dimen/yms_dimens_16.0_px"
+        android:maxLength="200"
+        />
+
+</LinearLayout>

@@ -31,35 +31,41 @@
                     app:layout_marginTopPercent="3%w"
                     android:background="@color/color_transparent" />
 
-                <com.luanxu.custom.percent.PercentFrameLayout
+                <com.luanxu.custom.percent.PercentLinearLayout
                     android:id="@+id/pfl_schoolmate_circle"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    app:layout_heightPercent="12%w"
                     android:background="@drawable/selector_shape_ffffff_0dp"
-                    android:gravity="center_vertical" >
+                    android:gravity="center_vertical"
+                    app:layout_heightPercent="13%w">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_schoolmate_circle"
+                        app:layout_heightPercent="6%w"
+                        app:layout_marginLeftPercent="5%w"
+                        app:layout_widthPercent="6%w" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_schoolmate_circle"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/yms_font_32_px"
+                        app:layout_marginLeftPercent="2%w" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end|center_vertical"
-                        app:layout_marginRightPercent="3%w"
                         android:contentDescription="@null"
-                        android:src="@mipmap/ic_work_right" />
-
-                    <TextView
-                        android:textColor="@color/color_black"
-                        android:textSize="@dimen/yms_font_32_px"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        app:layout_marginLeftPercent="5%w"
-                        android:drawableLeft="@mipmap/ic_launcher"
-                        android:drawablePadding="@dimen/yms_dimens_24.0_px"
-                        android:drawableStart="@mipmap/ic_launcher"
-                        android:gravity="center_vertical"
-                        android:text="@string/str_schoolmate_circle"
-                        android:id="@+id/textView" />
-                </com.luanxu.custom.percent.PercentFrameLayout>
+                        android:src="@mipmap/ic_work_right"
+                        app:layout_marginRightPercent="3%w" />
+                </com.luanxu.custom.percent.PercentLinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -67,23 +73,27 @@
                     app:layout_marginTopPercent="3%w"
                     android:background="@color/color_transparent" />
 
-                <com.luanxu.custom.percent.PercentFrameLayout
+                <com.luanxu.custom.percent.PercentLinearLayout
                     android:id="@+id/pfl_help"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    app:layout_heightPercent="12%w"
+                    app:layout_heightPercent="13%w"
                     android:background="@drawable/selector_shape_ffffff_0dp"
                     android:gravity="center_vertical" >
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_heightPercent="6%w"
+                        app:layout_widthPercent="6%w"
+                        app:layout_marginLeftPercent="5%w"
+                        android:src="@mipmap/ic_help"/>
                     <TextView
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/yms_font_32_px"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="match_parent"
-                        app:layout_marginLeftPercent="5%w"
-                        android:drawableLeft="@mipmap/ic_launcher"
-                        android:drawablePadding="@dimen/yms_dimens_24.0_px"
-                        android:drawableStart="@mipmap/ic_launcher"
+                        app:layout_marginLeftPercent="2%w"
                         android:gravity="center_vertical"
                         android:text="@string/str_lost_and_found" />
 
@@ -94,7 +104,7 @@
                         app:layout_marginRightPercent="3%w"
                         android:contentDescription="@null"
                         android:src="@mipmap/ic_work_right" />
-                </com.luanxu.custom.percent.PercentFrameLayout>
+                </com.luanxu.custom.percent.PercentLinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -102,23 +112,27 @@
                     app:layout_marginTopPercent="3%w"
                     android:background="@color/color_transparent" />
 
-                <com.luanxu.custom.percent.PercentFrameLayout
+                <com.luanxu.custom.percent.PercentLinearLayout
                     android:id="@+id/pfl_love"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    app:layout_heightPercent="12%w"
+                    app:layout_heightPercent="13%w"
                     android:background="@drawable/selector_shape_ffffff_0dp"
                     android:gravity="center_vertical" >
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_heightPercent="6%w"
+                        app:layout_widthPercent="6%w"
+                        app:layout_marginLeftPercent="5%w"
+                        android:src="@mipmap/ic_confession_wall"/>
                     <TextView
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/yms_font_32_px"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="match_parent"
-                        app:layout_marginLeftPercent="5%w"
-                        android:drawableLeft="@mipmap/ic_launcher"
-                        android:drawablePadding="@dimen/yms_dimens_24.0_px"
-                        android:drawableStart="@mipmap/ic_launcher"
+                        app:layout_marginLeftPercent="2%w"
                         android:gravity="center_vertical"
                         android:text="@string/str_confession_wall" />
 
@@ -129,7 +143,7 @@
                         app:layout_marginRightPercent="3%w"
                         android:contentDescription="@null"
                         android:src="@mipmap/ic_work_right" />
-                </com.luanxu.custom.percent.PercentFrameLayout>
+                </com.luanxu.custom.percent.PercentLinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -137,23 +151,27 @@
                     app:layout_marginTopPercent="3%w"
                     android:background="@color/color_transparent" />
 
-                <com.luanxu.custom.percent.PercentFrameLayout
+                <com.luanxu.custom.percent.PercentLinearLayout
                     android:id="@+id/pfl_activity"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    app:layout_heightPercent="12%w"
+                    app:layout_heightPercent="13%w"
                     android:background="@drawable/selector_shape_ffffff_0dp"
                     android:gravity="center_vertical" >
-
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_heightPercent="6%w"
+                        app:layout_widthPercent="6%w"
+                        app:layout_marginLeftPercent="5%w"
+                        android:src="@mipmap/ic_activity"/>
                     <TextView
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/yms_font_32_px"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="match_parent"
-                        app:layout_marginLeftPercent="5%w"
-                        android:drawableLeft="@mipmap/ic_launcher"
-                        android:drawablePadding="@dimen/yms_dimens_24.0_px"
-                        android:drawableStart="@mipmap/ic_launcher"
+                        app:layout_marginLeftPercent="2%w"
                         android:gravity="center_vertical"
                         android:text="@string/str_movement" />
 
@@ -164,7 +182,7 @@
                         app:layout_marginRightPercent="3%w"
                         android:contentDescription="@null"
                         android:src="@mipmap/ic_work_right" />
-                </com.luanxu.custom.percent.PercentFrameLayout>
+                </com.luanxu.custom.percent.PercentLinearLayout>
 
                 <View
                     android:layout_width="match_parent"

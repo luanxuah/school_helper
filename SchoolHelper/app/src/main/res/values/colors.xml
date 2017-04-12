@@ -70,4 +70,10 @@
     <color name="color_bg_green_normal">#1aad19</color>
     <!--绿色轻按-->
     <color name="color_bg_green_normal_pressed_light">#1a179b16</color>
+    <!--绿色重按-->
+    <color name="color_bg_green_normal_pressed">#179b16</color>
+
+    <color name="color_picker_imageloading">#252528</color>
+    <color name="color_picker">#007aff</color>
+    <color name="color_393A3F">#393A3F</color>
 </resources>

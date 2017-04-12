@@ -221,9 +221,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
         final View popRoot = LayoutInflater.from(getActivity()).inflate(R.layout.pop_reference, null);
         // 创建PopupWindow实例, 分别是宽度和高度
         morePop = new PopupWindow(popRoot, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
-        int[] location = new int[2];
-        v.getLocationOnScreen(location);// v是title的右部，撑满整个title的高度，是一样高的
-        morePop.showAtLocation(view.findViewById(R.id.tv_more), Gravity.NO_GRAVITY, location[0], location[1] + view.findViewById(R.id.tv_more).getHeight()-20);
+        morePop.showAsDropDown(view.findViewById(R.id.ll_head));
         // 点击其他地方消失
         popRoot.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")

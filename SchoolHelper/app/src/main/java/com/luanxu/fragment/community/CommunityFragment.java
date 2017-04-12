@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.luanxu.activity.community.ConfessionWallActivity;
+import com.luanxu.activity.community.LostAndFoundActivity;
 import com.luanxu.activity.community.MovementActivity;
 import com.luanxu.activity.community.SchoolmateCircleActivity;
 import com.luanxu.base.BaseFragment;
 import com.luanxu.custom.TitleBar;
-import com.luanxu.custom.percent.PercentFrameLayout;
+import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.R;
 
 /**
@@ -28,13 +30,13 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
 
     private View view;
     //校友圈
-    private PercentFrameLayout pfl_schoolmate_circle;
+    private PercentLinearLayout pfl_schoolmate_circle;
     //失物招领
-    private PercentFrameLayout pfl_help;
+    private PercentLinearLayout pfl_help;
     //表白墙
-    private PercentFrameLayout pfl_love;
+    private PercentLinearLayout pfl_love;
     //校内活动
-    private PercentFrameLayout pfl_activity;
+    private PercentLinearLayout pfl_activity;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (view == null) {
@@ -59,13 +61,13 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
      * 初始化数据和控件
      */
     private void init(){
-        pfl_schoolmate_circle = (PercentFrameLayout) view.findViewById(R.id.pfl_schoolmate_circle);
+        pfl_schoolmate_circle = (PercentLinearLayout) view.findViewById(R.id.pfl_schoolmate_circle);
         pfl_schoolmate_circle.setOnClickListener(this);
-        pfl_help = (PercentFrameLayout) view.findViewById(R.id.pfl_help);
+        pfl_help = (PercentLinearLayout) view.findViewById(R.id.pfl_help);
         pfl_help.setOnClickListener(this);
-        pfl_love = (PercentFrameLayout) view.findViewById(R.id.pfl_love);
+        pfl_love = (PercentLinearLayout) view.findViewById(R.id.pfl_love);
         pfl_love.setOnClickListener(this);
-        pfl_activity = (PercentFrameLayout) view.findViewById(R.id.pfl_activity);
+        pfl_activity = (PercentLinearLayout) view.findViewById(R.id.pfl_activity);
         pfl_activity.setOnClickListener(this);
     }
 
@@ -80,9 +82,13 @@ public class CommunityFragment extends BaseFragment implements View.OnClickListe
                 break;
             case R.id.pfl_help:
                 //失物招领
+                intent = new Intent(context, LostAndFoundActivity.class);
+                startActivity(intent);
                 break;
             case R.id.pfl_love:
                 //表白墙
+                intent = new Intent(context, ConfessionWallActivity.class);
+                startActivity(intent);
                 break;
             case R.id.pfl_activity:
                 //校内活动
