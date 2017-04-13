@@ -53,6 +53,8 @@
 
     <!-- 社区页面 -->
     <string name="str_movement">校内活动</string>
+    <string name="str_my_movement">我的活动</string>
+    <string name="str_send_movement">发布活动</string>
     <string name="str_movement_detail">活动详情</string>
     <string name="str_release">发布</string>
     <string name="str_message">消息</string>
@@ -62,6 +64,9 @@
     <string name="str_send_schoolmate_circle">发布校友圈</string>
     <string name="str_not_add_same_pic">不能添加相同的图片</string>
     <string name="str_send_lost_found">发布失物招领</string>
+    <string name="str_scan">扫一扫</string>
+    <string name="my_qr_code">我的二维码</string>
+    <string name="str_scan_send_movement">扫描二维码发布活动</string>
     <!--***************************************************我的*************************************************************-->
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>

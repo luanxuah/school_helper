@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 app:layout_marginLeftPercent="7.4%w"
                 android:gravity="center"
-                android:text="@string/str_release" />
+                android:text="@string/str_send_movement" />
         </com.luanxu.custom.percent.PercentLinearLayout>
 
         <View
@@ -52,7 +52,7 @@
             android:background="@color/color_white" />
 
         <com.luanxu.custom.percent.PercentLinearLayout
-            android:id="@+id/ll_message"
+            android:id="@+id/ll_movement"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_heightPercent="40%w"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 app:layout_marginLeftPercent="7.4%w"
                 android:gravity="center"
-                android:text="@string/str_message" />
+                android:text="@string/str_my_movement" />
         </com.luanxu.custom.percent.PercentLinearLayout>
     </com.luanxu.custom.percent.PercentLinearLayout>
 

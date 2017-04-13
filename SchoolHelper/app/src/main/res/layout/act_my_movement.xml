@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_line" />
+
+    <com.luanxu.custom.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.luanxu.custom.SearchEditText
+            android:id="@+id/et_search"
+            android:textSize="@dimen/yms_font_32_px"
+            android:textColor="@color/color_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@mipmap/search_friend_icon"
+            android:drawablePadding="@dimen/yms_dimens_15.0_px"
+            android:gravity="center_vertical"
+            android:hint="@string/str_search"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="@dimen/yms_dimens_3.0_px"
+            android:paddingLeft="@dimen/yms_dimens_20.0_px"
+            android:paddingRight="@dimen/yms_dimens_20.0_px"
+            android:singleLine="true"
+            app:layout_marginPercent="2%w"
+            app:layout_marginTopPercent="3%w" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:background="@color/color_divider"
+            app:layout_marginBottomPercent="1%w"
+            app:layout_marginLeftPercent="2%w"
+            app:layout_marginRightPercent="2%w" />
+
+        <com.luanxu.custom.PullToRefreshListView
+            android:id="@+id/pullToRefreshListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"/>
+
+    </com.luanxu.custom.percent.PercentLinearLayout>
+</LinearLayout>

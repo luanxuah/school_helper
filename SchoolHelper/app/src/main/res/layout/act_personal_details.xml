@@ -269,6 +269,49 @@
                 android:background="@color/color_divider" />
 
             <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_qr"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/selector_pressed_background"
+                app:layout_heightPercent="11.7%w">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/my_qr_code"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/yms_font_28_px"
+                    app:layout_marginLeftPercent="2.6%w" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:singleLine="true"
+                    android:textColor="@color/color_gray"
+                    android:textSize="@dimen/yms_font_28_px"
+                    app:layout_marginLeftPercent="2.6%w"
+                    app:layout_marginRightPercent="2.6%w"
+                    android:drawableRight="@mipmap/ic_qr"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_work_right"
+                    android:visibility="visible"
+                    app:layout_marginRightPercent="2.6%w" />
+            </com.luanxu.custom.percent.PercentLinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_divider" />
+
+            <com.luanxu.custom.percent.PercentLinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:background="@drawable/selector_pressed_background"

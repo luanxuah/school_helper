@@ -89,6 +89,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
+        <!-- 我的活动页面 -->
+        <activity
+            android:name="com.luanxu.activity.community.MyMovementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!-- 校内活动详情页面 -->
         <activity
             android:name="com.luanxu.activity.community.MovementDetailActivity"
@@ -177,6 +183,12 @@
         <!-- 修改密码页面 -->
         <activity
             android:name="com.luanxu.activity.ChangePasswardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
+        <!-- 修改密码页面 -->
+        <activity
+            android:name="com.luanxu.activity.user.ActMyQr"
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
     </application>

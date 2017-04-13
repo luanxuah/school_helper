@@ -49,6 +49,8 @@ public class PersonalDetailsActivity extends BaseActivity implements View.OnClic
     private TextView tv_sex;
     //学院
     private TextView tv_academy;
+    //二维码
+    private PercentLinearLayout pll_qr;
     //出生年月
     private TextView tv_birth_date;
     //政治面貌
@@ -79,6 +81,8 @@ public class PersonalDetailsActivity extends BaseActivity implements View.OnClic
         tv_name = (TextView) findViewById(R.id.tv_name);
         tv_sex = (TextView) findViewById(R.id.tv_sex);
         tv_academy = (TextView) findViewById(R.id.tv_academy);
+        pll_qr = (PercentLinearLayout) findViewById(R.id.pll_qr);
+        pll_qr.setOnClickListener(this);
         tv_birth_date = (TextView) findViewById(R.id.tv_birth_date);
         tv_politics_status = (TextView) findViewById(R.id.tv_politics_status);
         pll_photo = (PercentLinearLayout) findViewById(R.id.pll_photo);
@@ -148,6 +152,10 @@ public class PersonalDetailsActivity extends BaseActivity implements View.OnClic
             case R.id.pll_head:
                 //点击更改头像
                 SelectPhotoAlbumUtils.selectPhoto(context, SelectPhotoAlbumUtils.ACTION_SHARE_FROM_ALBUM, 1);
+                break;
+            case R.id.pll_qr:
+                Intent intent = new Intent(context, ActMyQr.class);
+                startActivity(intent);
                 break;
             case R.id.pll_photo:
                 //点击更改手机号

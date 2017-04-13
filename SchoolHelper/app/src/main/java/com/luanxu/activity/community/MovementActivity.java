@@ -18,6 +18,7 @@ import com.luanxu.base.BaseActivity;
 import com.luanxu.custom.PullToRefreshListView;
 import com.luanxu.custom.TitleBar;
 import com.luanxu.schoolhelper.R;
+import com.luanxu.utils.ResourceUtil;
 
 /**
  * @author: LuanXu
@@ -119,16 +120,20 @@ public class MovementActivity extends BaseActivity{
 
             @Override
             public void onClick(View v) {
+                morePop.dismiss();
                 Intent intent = new Intent(context, MipcaActivityCapture.class);
+                intent.putExtra("content", ResourceUtil.getString(context, R.string.str_scan_send_movement));
                 startActivity(intent);
             }
         });
 
-        //消息
-        popRoot.findViewById(R.id.ll_message).setOnClickListener(new View.OnClickListener() {
+        //我的活动
+        popRoot.findViewById(R.id.ll_movement).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                morePop.dismiss();
+                Intent intent = new Intent(context, MyMovementActivity.class);
+                startActivity(intent);
             }
         });
 

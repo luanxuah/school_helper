@@ -64,10 +64,10 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
         SchoolHelperApplication.getInstance().addActivity(this);
         TitleBar bar = getTitleBar();
         bar.setBack();
-        bar.setTitle("扫一扫", R.color.color_white);
+        bar.setTitle(R.string.str_scan, R.color.color_white);
 
         // 是否加的那句提示
-        content = "正在扫描";
+        content = getIntent().getStringExtra("content");
         Log.i("提示语为：  ", content);
 
         TextView tvContext = (TextView) findViewById(R.id.tv_context);
