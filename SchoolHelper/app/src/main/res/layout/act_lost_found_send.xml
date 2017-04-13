@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white">
+
+    <include layout="@layout/title_line" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.luanxu.custom.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/yms_dimens_20.0_px">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="丢失/拾取物品"
+                android:textSize="@dimen/yms_font_30_px"
+                android:textColor="@color/color_313131"
+                />
+
+            <EditText
+                android:id="@+id/et_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="描述"
+                android:background="@null"
+                android:textSize="@dimen/yms_font_30_px"
+                android:paddingTop="@dimen/yms_dimens_20.0_px"
+                android:paddingBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_hint"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="丢失/拾取时间"
+                android:textSize="@dimen/yms_font_30_px"
+                android:textColor="@color/color_313131"/>
+
+            <EditText
+                android:id="@+id/et_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="时间"
+                android:background="@null"
+                android:textSize="@dimen/yms_font_30_px"
+                android:paddingTop="@dimen/yms_dimens_20.0_px"
+                android:paddingBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_hint"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="丢失/拾取地点"
+                android:textSize="@dimen/yms_font_30_px"
+                android:textColor="@color/color_313131"/>
+
+            <EditText
+                android:id="@+id/et_site"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="地点"
+                android:background="@null"
+                android:textSize="@dimen/yms_font_30_px"
+                android:paddingTop="@dimen/yms_dimens_20.0_px"
+                android:paddingBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_hint"
+                android:layout_marginBottom="@dimen/yms_dimens_20.0_px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择失物或招领"
+                android:textColor="@color/color_313131"
+                android:textSize="@dimen/yms_font_30_px"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/yms_dimens_20.0_px">
+                <RadioButton
+                    android:id="@+id/rb_lost"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="发表失物"
+                    android:checked="true"
+                    android:textColor="@color/color_313131"
+                    android:textSize="@dimen/yms_font_30_px"/>
+                <RadioButton
+                    android:id="@+id/rb_found"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="发表招领"
+                    android:textColor="@color/color_313131"
+                    android:textSize="@dimen/yms_font_30_px"/>
+            </RadioGroup>
+            <com.luanxu.custom.percent.PercentLinearLayout
+                android:id="@+id/pll_img_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/ppl_view"
+                android:layout_gravity="center"
+                android:background="@color/color_white"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <com.luanxu.custom.MyGridView
+                    android:id="@+id/gv_imgs"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:layout_marginBottomPercent="5%w"
+                    app:layout_marginTopPercent="5%w"
+                    android:cacheColorHint="#00000000"
+                    android:duplicateParentState="false"
+                    android:focusable="false"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/yms_dimens_20.0_px"
+                    android:listSelector="#00000000"
+                    android:numColumns="4"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="@dimen/yms_dimens_20.0_px" />
+            </com.luanxu.custom.percent.PercentLinearLayout>
+        </com.luanxu.custom.percent.PercentLinearLayout>
+    </ScrollView>
+
+</LinearLayout>

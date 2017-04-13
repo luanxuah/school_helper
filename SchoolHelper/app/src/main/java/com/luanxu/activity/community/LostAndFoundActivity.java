@@ -1,11 +1,18 @@
 package com.luanxu.activity.community;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.luanxu.adapter.MyFragmentPagerAdapter;
@@ -44,9 +51,11 @@ public class LostAndFoundActivity extends BaseActivity implements View.OnClickLi
     private TextView tv_lost;
     //招领按钮
     private TextView tv_found;
-    //发送按钮
-    private ImageView iv_send;
+    //更多按钮
+    private ImageView iv_more;
     private NoScrollViewPager viewPager;
+    //蒙版
+    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,11 +77,12 @@ public class LostAndFoundActivity extends BaseActivity implements View.OnClickLi
         tv_lost.setOnClickListener(this);
         tv_found = (TextView) findViewById(R.id.tv_found);
         tv_found.setOnClickListener(this);
-        iv_send = (ImageView) findViewById(R.id.iv_send);
-        iv_send.setOnClickListener(this);
+        iv_more = (ImageView) findViewById(R.id.iv_more);
+        iv_more.setOnClickListener(this);
         viewPager = (NoScrollViewPager) findViewById(R.id.viewPager);
         viewPager.setNoScroll(true);
-
+        view = findViewById(R.id.view);
+        view.setOnClickListener(this);
         initDate();
     }
 
@@ -115,6 +125,74 @@ public class LostAndFoundActivity extends BaseActivity implements View.OnClickLi
         },500, TimeUnit.MILLISECONDS);
     }
 
+    // 更多弹窗
+    private PopupWindow morePop;
+
+    /**
+     * @param v 控件
+     * @Description: title更多弹框
+     * @return: void
+     */
+    private void popupWindow(View v) {
+        view.setVisibility(View.VISIBLE);
+        final View popRoot = LayoutInflater.from(context).inflate(R.layout.pop_lost_found, null);
+        // 创建PopupWindow实例, 分别是宽度和高度
+        morePop = new PopupWindow(popRoot, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
+        morePop.showAsDropDown(findViewById(R.id.ll_head));
+        // 点击其他地方消失
+        popRoot.setOnTouchListener(new View.OnTouchListener() {
+            @SuppressLint("ClickableViewAccessibility")
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (morePop != null && morePop.isShowing()) {
+                    morePop.dismiss();
+                    morePop = null;
+                }
+                return false;
+            }
+        });
+        popRoot.setFocusable(true);
+        popRoot.setFocusableInTouchMode(true);
+        popRoot.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK) {
+                    morePop.dismiss();
+                    morePop = null;
+                    return true;
+                }
+                return false;
+            }
+        });
+
+        //发布
+        popRoot.findViewById(R.id.ll_send).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                morePop.dismiss();
+                Intent intent = new Intent(context, LostAndFoundSendActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //消息
+        popRoot.findViewById(R.id.ll_message).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                morePop.dismiss();
+            }
+        });
+
+        morePop.setOnDismissListener(new PopupWindow.OnDismissListener() {
+            @Override
+            public void onDismiss() {
+                view.setVisibility(View.GONE);
+            }
+        });
+
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -139,8 +217,13 @@ public class LostAndFoundActivity extends BaseActivity implements View.OnClickLi
             case R.id.iv_back:
                 finish();
                 break;
-            case R.id.iv_send:
-
+            case R.id.iv_more:
+                //点击更多按钮
+                popupWindow(iv_more);
+                break;
+            case R.id.view:
+                //点击蒙版
+                view.setVisibility(View.GONE);
                 break;
         }
     }

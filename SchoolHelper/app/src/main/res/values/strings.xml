@@ -61,6 +61,7 @@
     <string name="str_confession_wall">表白墙</string>
     <string name="str_send_schoolmate_circle">发布校友圈</string>
     <string name="str_not_add_same_pic">不能添加相同的图片</string>
+    <string name="str_send_lost_found">发布失物招领</string>
     <!--***************************************************我的*************************************************************-->
     <!-- 我的页面 -->
     <string name="str_personal_msg">个人信息</string>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,6 +9,7 @@
 
 
     <com.luanxu.custom.percent.PercentLinearLayout
+        android:id="@+id/ll_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape_gradient_title"
@@ -102,10 +103,11 @@
                 app:layout_marginRightPercent="25%h"
                 android:textSize="@dimen/yms_font_30_px"
                 android:textColor="@color/color_white"
-                android:text="发布"/>
+                android:drawableLeft="@mipmap/img_title_more"
+                android:drawableStart="@mipmap/img_title_more"/>
 
             <ImageView
-                android:id="@+id/iv_send"
+                android:id="@+id/iv_more"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_gravity="left"
@@ -115,7 +117,7 @@
                 android:src="@drawable/selector_title_onclick_square"
                 app:layout_heightPercent="100%h"
                 app:layout_marginLeftPercent="30%h"
-                app:layout_widthPercent="105%h" />
+                app:layout_widthPercent="100%h" />
         </com.luanxu.custom.percent.PercentFrameLayout>
 
     </com.luanxu.custom.percent.PercentLinearLayout>
@@ -123,6 +125,14 @@
     <com.luanxu.custom.NoScrollViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_below="@+id/ll_head"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:visibility="gone"/>
+</RelativeLayout>

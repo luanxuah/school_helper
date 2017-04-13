@@ -125,6 +125,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/IMTheme.Transparent" />
 
+        <!-- 失物招领页面 -->
+        <activity
+            android:name="com.luanxu.activity.community.LostAndFoundSendActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IMTheme.Transparent" />
+
         <!--**********************************************************我的模块**********************************************************************************************-->
         <!-- 空教室查询页面页面 -->
         <activity

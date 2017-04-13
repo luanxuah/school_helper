@@ -49,7 +49,7 @@ public class FoundFragment extends BaseFragment{
      */
     private void init(){
         list = (PullToRefreshListView) view.findViewById(R.id.list);
-        adapter = new LostAdapter(context, false);
+        adapter = new LostAdapter(context, true);
         list.setAdapter(adapter);
     }
 
