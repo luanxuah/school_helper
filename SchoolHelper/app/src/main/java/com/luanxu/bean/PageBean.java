@@ -23,13 +23,6 @@ public class PageBean extends Bean {
         this.records = records;
     }
 
-    public PageBean(String status, String msg, String responseMessage, String errorMessage, int page, int total, int records) {
-        super(status, msg, responseMessage, errorMessage);
-        this.page = page;
-        this.total = total;
-        this.records = records;
-    }
-
     public int getPage() {
         return page;
     }

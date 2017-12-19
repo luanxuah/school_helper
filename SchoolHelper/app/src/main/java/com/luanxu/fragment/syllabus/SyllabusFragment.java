@@ -62,7 +62,7 @@ public class SyllabusFragment extends BaseFragment implements View.OnClickListen
     private String selectYear = "大二";
     //选择的学期
     private String selectTerm = "第一学期";
-    private String firstDayTime = "2017-2-27";
+    private String firstDayTime = "2017-9-27";
 
     //课程控件的背景数组
     private final Integer[] lucency_colors = {R.drawable.shape_round_58aeef, R.drawable.shape_round_ed9fa0, R.drawable.shape_round_e3c372, R.drawable.shape_round_94d161, R.drawable.shape_round_8aabe9

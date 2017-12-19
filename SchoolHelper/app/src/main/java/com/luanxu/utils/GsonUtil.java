@@ -1,10 +1,16 @@
 package com.luanxu.utils;
 
+import android.text.TextUtils;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: 范建海
@@ -45,6 +51,42 @@ public class GsonUtil {
      */
     public static String object2Json(Object obj) {
         return gson.toJson(obj);
+    }
+
+    public static String map2Json2(Map<String ,String> map, String token, String pid) {
+        if (null == map || map.isEmpty()){
+            return "";
+        }
+        JSONObject jsonObject = new JSONObject();
+        try {
+            JSONObject bodyJsonObject = new JSONObject();
+            if (map!=null){
+                for (Map.Entry<String,String> entry : map.entrySet()) {
+                    Object val = entry.getValue();
+                    if (null == val)
+                        val = "null";
+                    bodyJsonObject.put(entry.getKey(),val.toString());
+                }
+            }
+            jsonObject.put("body", bodyJsonObject);
+
+            JSONObject headJsonObject = new JSONObject();
+            if (!TextUtils.isEmpty(token)){
+                headJsonObject.put("token", token);
+            }
+            if (!TextUtils.isEmpty(pid)){
+                headJsonObject.put("pid", pid);
+            }
+            jsonObject.put("head", headJsonObject);
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        String json = jsonObject.toString();
+        String aesJson = AESUtils.encryptParameters(json);
+        String md5Json = MD5Utils.getMD5String(aesJson);
+
+        return aesJson+"."+md5Json;
     }
 
 }

@@ -1,24 +1,38 @@
 package com.luanxu.activity;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.luanxu.application.SchoolHelperApplication;
 import com.luanxu.base.BaseActivity;
+import com.luanxu.bean.Bean;
+import com.luanxu.bean.LoginBean;
 import com.luanxu.custom.RoundCornerImageView;
 import com.luanxu.custom.percent.PercentLinearLayout;
 import com.luanxu.schoolhelper.MainActivity;
 import com.luanxu.schoolhelper.R;
 import com.luanxu.utils.CommonUtils;
+import com.luanxu.utils.ToastUtil;
+import com.luanxu.utils.UrlConstant;
+import com.luanxu.utils.okhttps.NetCallback;
+import com.luanxu.utils.okhttps.OkHttpsUtil;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author: LuanXu
@@ -136,11 +150,37 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         });
     }
 
+    private void login(){
+        String userName = et_username.getText().toString().trim();
+        String passward = et_password.getText().toString().trim();
+        if (TextUtils.isEmpty(userName)){
+            ToastUtil.show(context, "请输入用户名", Toast.LENGTH_SHORT);
+            return;
+        }else if (TextUtils.isEmpty(passward)){
+            ToastUtil.show(context, "请输入密码", Toast.LENGTH_SHORT);
+            return;
+        }
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("userName", userName);
+        params.put("passWord", passward);
+        OkHttpsUtil.postWithoutToken(context, UrlConstant.LOGIN, "登陆中", params, Bean.class, new NetCallback<Bean>() {
+            @Override
+            public void onSuccess(Context ctx, Bean bean, Dialog dialog) {
+                super.onSuccess(ctx, bean, dialog);
+                if (bean!=null){
+                    Intent intent = new Intent(context, MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             //登录
             case R.id.bt_login:
+//                login();
                 Intent intent = new Intent(context, MainActivity.class);
                 startActivity(intent);
                 break;

@@ -10,30 +10,20 @@ import java.io.Serializable;
  * @changed by:
  */
 public class Bean implements Serializable {
-    // 状态值
+    // 1:成功 0:失败
+    protected String code;
+    // 状态码
     protected String status;
-    // 请求返回的相关信息
+    // 提示信息
     protected String msg;
-    // 请求返回的相关信息
-    protected String responseMessage;
-    // 请求错误的返回相关信息
-    protected String errorMessage;
+    protected String token;
 
-    public Bean() {}
-
-    public Bean(String status, String msg, String responseMessage, String errorMessage) {
-        this.status = status;
-        this.msg = msg;
-        this.responseMessage = responseMessage;
-        this.errorMessage = errorMessage;
+    public String getCode() {
+        return code;
     }
 
-    public String getErrorMessage() {
-        return errorMessage;
-    }
-
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getStatus() {
@@ -44,29 +34,19 @@ public class Bean implements Serializable {
         this.status = status;
     }
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     public String getMsg() {
         return msg;
     }
 
     public void setMsg(String msg) {
         this.msg = msg;
-    }
-
-    public String getResponseMessage() {
-        return responseMessage;
-    }
-
-    public void setResponseMessage(String responseMessage) {
-        this.responseMessage = responseMessage;
-    }
-
-    @Override
-    public String toString() {
-        return "Bean{" +
-                "status='" + status + '\'' +
-                ", msg='" + msg + '\'' +
-                ", responseMessage='" + responseMessage + '\'' +
-                ", errorMessage='" + errorMessage + '\'' +
-                '}';
     }
 }

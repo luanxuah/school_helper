@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.text.TextUtils;
 
+import com.google.gson.Gson;
 import com.luanxu.bean.Bean;
 import com.luanxu.bean.PageBean;
 import com.luanxu.custom.PullToRefreshListView;
@@ -392,7 +393,6 @@ public class OkHttpsUtil {
                 dialog = outsideDialog;
             }
 
-
             post(isRefresh,pullToRefreshListView,ctx,url,dialog,params,true,cls,netCallback);
         }
 
@@ -458,15 +458,18 @@ public class OkHttpsUtil {
         if(NetWorkUtil.isNetworkConnected(ctx)) {
 
             // 构建Post请求创建器
-            PostFormBuilder builder = OkHttpUtils.post().url(url).tag(ctx).addParams("json", "Y").params(params);
+            PostFormBuilder builder = OkHttpUtils.post().url(url).tag(ctx).params(params);
             // 判断是否需要Token
             if (needToken) {
                 // 本地缓存的Token
                 String tokenCode = SharedPreferencesUtil.get(ctx, CommonConstant.TOKEN_FILE_NAME,CommonConstant.TOKEN_CODE_KEY,DEFAULT_TOKEN);
-                builder.addHeader("accessToken", tokenCode);
+                String value = GsonUtil.map2Json2(params, tokenCode, null);
+                builder.addParams("json", value);
                 // 输出请求参数日志(有Token)
                 LogUtil.printParams(url,params,tokenCode);
             } else {
+                String value = GsonUtil.map2Json2(params, null, null);
+                builder.addParams("json", value);
                 // 输出请求参数日志(没有Token)
                 LogUtil.printParams(url,params,null);
             }
@@ -554,9 +557,8 @@ public class OkHttpsUtil {
                                 // 请求无数据
                                 netCallback.onNoData(ctx,dialog);
 
-                                String msgHint = !TextUtils.isEmpty(t.getMsg()) ? t.getMsg() : (!TextUtils.isEmpty(t.getErrorMessage()) ? t.getErrorMessage() : "");
-                                if (!TextUtils.isEmpty(msgHint)) {
-                                    netCallback.onNoData(ctx,msgHint,dialog);
+                                if (!TextUtils.isEmpty(t.getMsg())) {
+                                    netCallback.onNoData(ctx,t.getMsg(),dialog);
                                 }
                             }else {
                                 return;
